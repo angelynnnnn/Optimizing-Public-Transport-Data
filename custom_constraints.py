@@ -12,28 +12,6 @@ L_bus = ['Oei Tiong Ham Building (BTC)', 'Botanic Gardents MRT (BTC)', 'College 
 
 bus_routes = {'A1': A1_bus, 'A2':A2_bus, 'D1': D1_bus, 'D2': D2_bus, 'BTC (Bukit Timah Campus)': BTC_bus, 'E': E_bus, 'K': K_bus, 'L': L_bus}
 
-# def valid_trip(row):
-#     bus = row['ISB_Service']
-#     start = row['bus_stop_board']
-#     end = row['bus_stop_alight']
-
-#     route = bus_routes.get(bus, [])
-
-#     if start in route and end in route:
-#         start_index = route.index(start)
-#         end_index = route.index(end)
-#         if end_index == 0: # buses that loop back to the start
-#             end_index = len(route)
-        
-#         return start_index < end_index
-    
-#     else:
-#         return False
-
-# def is_valid(column_names, data):
-#     data[column_names[0]] = data.apply(valid_trip, axis=1)
-#     return data[column_names[0]]
-
 def valid_route(column_names, data):
     def check_route(row):
         bus = row[column_names[0]]
@@ -57,9 +35,9 @@ def valid_route(column_names, data):
 def valid_time(column_names, data):
     def check_time(row):
         time_str = row[column_names[0]]
-        time = pd.to_datetime(time_str, format='%I:%M:%S %p').time()
+        time = pd.to_datetime(time_str, format='%H:%M:%S').time()
 
-        if (pd.to_datetime('07:00:00 AM', format='%I:%M:%S %p').time() <= time)  or (time <= pd.to_datetime('11:00:00 PM', format='%I:%M:%S %p').time()):
+        if (pd.to_datetime('07:00:00', format='%H:%M:%S').time() <= time)  or (time <= pd.to_datetime('23:00:00', format='%H:%M:%S').time()):
             return True
         else:
             return False
