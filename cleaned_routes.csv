@@ -1,113 +1,113 @@
 ISB_Service,bus_stop_board,bus_stop_alight,day_of_the_week,time_start,travel_duration,frequency,punctuality,cleanliness,safety,coverage,crowdedness
-A2,PGP Foyer,Ventus,Monday,09:30:00,15 - 20 minutes,Neutral,Neutral,Very Satisfied,Satisfied,Satisfied,3.0
-D2,KR MRT,UTown,Monday,09:30:00,10 - 15 minutes,Satisfied,Satisfied,Satisfied,Satisfied,Satisfied,4.0
-A2,KR Bus Terminal,S17,Thursday,17:50:00,< 5 minutes,Very Satisfied,Satisfied,Satisfied,Satisfied,Very Satisfied,4.0
-A1,PGP Terminal,University Hall,Friday,11:30:00,10 - 15 minutes,Very Satisfied,Very Satisfied,Very Satisfied,Neutral,Very Satisfied,4.0
-A1,KR MRT,LT27,Tuesday,07:50:00,< 5 minutes,Neutral,Satisfied,Satisfied,Satisfied,Satisfied,5.0
-D2,UTown,Opp KR MRT,Friday,17:00:00,10 - 15 minutes,Neutral,Satisfied,Very Satisfied,Satisfied,Satisfied,4.0
-A2,Opp KR MRT,Opp HSSML,Friday,11:40:00,10 - 15 minutes,Neutral,Satisfied,Satisfied,Neutral,Satisfied,4.0
-A1,BIZ2,KR MRT,Wednesday,20:00:00,10 - 15 minutes,Satisfied,Satisfied,Satisfied,Neutral,Satisfied,2.0
-A1,BIZ2,KR MRT,Thursday,20:00:00,10 - 15 minutes,Satisfied,Satisfied,Satisfied,Neutral,Satisfied,2.0
-A1,BIZ2,KR MRT,Friday,20:00:00,10 - 15 minutes,Satisfied,Satisfied,Satisfied,Neutral,Satisfied,2.0
-A2,Opp KR MRT,Opp HSSML,Monday,11:50:00,5 - 10 minutes,Dissatisfied,Satisfied,Satisfied,Dissatisfied,Satisfied,5.0
-A1,KR MRT,CLB,Thursday,09:40:00,20 - 30 minutes,Dissatisfied,Satisfied,Satisfied,Neutral,Dissatisfied,5.0
-A2,Opp KR MRT,Opp HSSML,Friday,14:30:00,10 - 15 minutes,Dissatisfied,Dissatisfied,Satisfied,Neutral,Satisfied,4.0
-A1,BIZ2,KR MRT,Wednesday,14:45:00,5 - 10 minutes,Dissatisfied,Neutral,Neutral,Dissatisfied,Neutral,5.0
-A1,LT13,LT27,Friday,16:00:00,10 - 15 minutes,Satisfied,Satisfied,Satisfied,Satisfied,Satisfied,3.0
-A2,Opp KR MRT,Opp HSSML,Thursday,08:10:00,10 - 15 minutes,Neutral,Satisfied,Satisfied,Neutral,Satisfied,5.0
-A1,KR MRT,CLB,Monday,10:45:00,5 - 10 minutes,Neutral,Dissatisfied,Satisfied,Neutral,Satisfied,3.0
-A1,KR MRT,CLB,Thursday,10:45:00,5 - 10 minutes,Neutral,Dissatisfied,Satisfied,Neutral,Satisfied,3.0
-A2,Opp KR MRT,Opp HSSML,Tuesday,09:45:00,5 - 10 minutes,Satisfied,Satisfied,Satisfied,Satisfied,Satisfied,4.0
-D2,Museum,UTown,Wednesday,18:15:00,< 5 minutes,Satisfied,Satisfied,Satisfied,Satisfied,Satisfied,2.0
-K,KR MRT,LT27,Thursday,09:00:00,10 - 15 minutes,Satisfied,Satisfied,Very Satisfied,Neutral,Neutral,4.0
-A1,KR MRT,CLB,Monday,09:30:00,5 - 10 minutes,Satisfied,Satisfied,Satisfied,Satisfied,Satisfied,4.0
-A1,KR MRT,CLB,Thursday,09:30:00,5 - 10 minutes,Satisfied,Satisfied,Satisfied,Satisfied,Satisfied,4.0
-A1,KR MRT,LT27,Wednesday,17:40:00,5 - 10 minutes,Satisfied,Satisfied,Satisfied,Neutral,Neutral,4.0
-D2,Opp KR MRT,COM3,Thursday,09:30:00,15 - 20 minutes,Neutral,Satisfied,Very Satisfied,Very Satisfied,Satisfied,3.0
-D2,Opp KR MRT,COM3,Friday,09:30:00,15 - 20 minutes,Neutral,Satisfied,Very Satisfied,Very Satisfied,Satisfied,3.0
-A2,Opp KR MRT,Ventus,Monday,09:35:00,10 - 15 minutes,Satisfied,Satisfied,Satisfied,Satisfied,Satisfied,4.0
-A2,Opp KR MRT,Ventus,Wednesday,09:35:00,10 - 15 minutes,Satisfied,Satisfied,Satisfied,Satisfied,Satisfied,4.0
-BTC (Bukit Timah Campus),Oei Tiong Ham Building (BTC),CLB,Monday,13:00:00,> 30 minutes,Satisfied,Satisfied,Satisfied,Satisfied,Satisfied,3.0
-D1,UTown,COM3,Monday,18:42:17,5 - 10 minutes,Dissatisfied,Satisfied,Very Satisfied,Neutral,Satisfied,5.0
-A1,KR MRT,LT27,Monday,07:50:00,5 - 10 minutes,Neutral,Neutral,Neutral,Neutral,Neutral,5.0
-A1,KR MRT,CLB,Thursday,10:30:00,10 - 15 minutes,Neutral,Neutral,Satisfied,Neutral,Satisfied,4.0
-A1,KR MRT,CLB,Friday,10:30:00,10 - 15 minutes,Neutral,Neutral,Satisfied,Neutral,Satisfied,4.0
-D2,KR MRT,UTown,Monday,13:00:00,10 - 15 minutes,Neutral,Neutral,Neutral,Dissatisfied,Dissatisfied,4.0
-A1,PGP Terminal,CLB,Saturday,12:00:00,15 - 20 minutes,Very dissatisfied,Neutral,Neutral,Neutral,Dissatisfied,1.0
-A2,Opp NUSS,KR Bus Terminal,Tuesday,13:00:00,5 - 10 minutes,Dissatisfied,Neutral,Neutral,Very dissatisfied,Very dissatisfied,5.0
-A1,YIH,CLB,Monday,15:30:00,< 5 minutes,Very Satisfied,Satisfied,Very Satisfied,Satisfied,Very Satisfied,2.0
-A1,YIH,CLB,Friday,15:30:00,< 5 minutes,Very Satisfied,Satisfied,Very Satisfied,Satisfied,Very Satisfied,2.0
-A2,KR Bus Terminal,Opp KR MRT,Thursday,09:00:00,10 - 15 minutes,Satisfied,Very Satisfied,Very Satisfied,Neutral,Satisfied,1.0
-D2,KR MRT,LT27,Wednesday,10:45:45,5 - 10 minutes,Dissatisfied,Neutral,Satisfied,Satisfied,Satisfied,5.0
-D2,UTown,S17,Tuesday,12:30:00,5 - 10 minutes,Satisfied,Satisfied,Satisfied,Neutral,Satisfied,5.0
-D2,UTown,COM3,Monday,11:35:00,15 - 20 minutes,Satisfied,Satisfied,Satisfied,Neutral,Satisfied,5.0
-D2,LT27,UTown,Monday,13:50:00,5 - 10 minutes,Neutral,Satisfied,Satisfied,Neutral,Neutral,5.0
-D2,PGP Terminal,UTown,Tuesday,16:30:00,15 - 20 minutes,Dissatisfied,Neutral,Satisfied,Satisfied,Satisfied,4.0
-D2,PGP Terminal,UTown,Thursday,16:30:00,15 - 20 minutes,Dissatisfied,Neutral,Satisfied,Satisfied,Satisfied,4.0
-A1,KR MRT,CLB,Monday,11:35:00,10 - 15 minutes,Dissatisfied,Neutral,Satisfied,Very dissatisfied,Neutral,5.0
-A1,KR MRT,CLB,Tuesday,11:35:00,10 - 15 minutes,Dissatisfied,Neutral,Satisfied,Very dissatisfied,Neutral,5.0
-D2,UTown,Opp KR MRT,Monday,13:42:17,15 - 20 minutes,Dissatisfied,Satisfied,Satisfied,Neutral,Neutral,5.0
-D2,UTown,Opp KR MRT,Thursday,13:42:17,15 - 20 minutes,Dissatisfied,Satisfied,Satisfied,Neutral,Neutral,5.0
-A1,KR MRT,CLB,Tuesday,09:00:00,10 - 15 minutes,Neutral,Satisfied,Satisfied,Dissatisfied,Satisfied,5.0
-A2,Opp KR MRT,Ventus,Monday,11:40:00,15 - 20 minutes,Dissatisfied,Dissatisfied,Satisfied,Neutral,Satisfied,5.0
-A2,Opp KR MRT,Ventus,Tuesday,11:40:00,15 - 20 minutes,Dissatisfied,Dissatisfied,Satisfied,Neutral,Satisfied,5.0
-A1,KR Bus Terminal,LT27,Monday,09:00:00,10 - 15 minutes,Dissatisfied,Dissatisfied,Satisfied,Satisfied,Satisfied,4.0
-A1,KR Bus Terminal,LT27,Thursday,09:00:00,10 - 15 minutes,Dissatisfied,Dissatisfied,Satisfied,Satisfied,Satisfied,4.0
-D2,Opp KR MRT,TCOMS,Monday,08:00:00,10 - 15 minutes,Dissatisfied,Neutral,Satisfied,Satisfied,Satisfied,5.0
-D2,Opp KR MRT,TCOMS,Tuesday,08:00:00,10 - 15 minutes,Dissatisfied,Neutral,Satisfied,Satisfied,Satisfied,5.0
-D2,Opp KR MRT,TCOMS,Wednesday,08:00:00,10 - 15 minutes,Dissatisfied,Neutral,Satisfied,Satisfied,Satisfied,5.0
-A1,KR MRT,CLB,Monday,11:40:00,15 - 20 minutes,Dissatisfied,Satisfied,Neutral,Neutral,Satisfied,5.0
-A2,Opp KR MRT,Ventus,Tuesday,09:40:00,15 - 20 minutes,Dissatisfied,Neutral,Satisfied,Neutral,Satisfied,4.0
-A2,Opp KR MRT,Ventus,Wednesday,09:40:00,15 - 20 minutes,Dissatisfied,Neutral,Satisfied,Neutral,Satisfied,4.0
-A2,Opp KR MRT,Ventus,Friday,09:40:00,15 - 20 minutes,Dissatisfied,Neutral,Satisfied,Neutral,Satisfied,4.0
-D2,KR MRT,UTown,Monday,09:40:00,10 - 15 minutes,Satisfied,Satisfied,Satisfied,Satisfied,Satisfied,5.0
-D2,KR MRT,UTown,Thursday,09:40:00,10 - 15 minutes,Satisfied,Satisfied,Satisfied,Satisfied,Satisfied,5.0
-D2,KR MRT,UTown,Monday,11:30:00,10 - 15 minutes,Satisfied,Satisfied,Satisfied,Satisfied,Satisfied,5.0
-A2,Opp KR MRT,Opp HSSML,Tuesday,12:00:00,10 - 15 minutes,Satisfied,Satisfied,Satisfied,Satisfied,Very Satisfied,2.0
-A2,Opp KR MRT,Opp HSSML,Thursday,12:00:00,10 - 15 minutes,Satisfied,Satisfied,Satisfied,Satisfied,Very Satisfied,2.0
-A1,KR MRT,LT27,Thursday,11:45:00,< 5 minutes,Neutral,Satisfied,Very Satisfied,Dissatisfied,Satisfied,4.0
-A1,KR MRT,CLB,Wednesday,11:30:00,15 - 20 minutes,Dissatisfied,Dissatisfied,Satisfied,Satisfied,Satisfied,5.0
-A1,LT27,KR Bus Terminal,Wednesday,07:45:00,5 - 10 minutes,Satisfied,Satisfied,Satisfied,Satisfied,Satisfied,2.0
-A1,KR MRT,CLB,Wednesday,16:00:00,10 - 15 minutes,Satisfied,Satisfied,Satisfied,Neutral,Satisfied,5.0
-A1,LT27,CLB,Tuesday,14:45:00,5 - 10 minutes,Dissatisfied,Neutral,Satisfied,Dissatisfied,Neutral,4.0
-A1,LT27,CLB,Thursday,14:45:00,5 - 10 minutes,Dissatisfied,Neutral,Satisfied,Dissatisfied,Neutral,4.0
-A1,KR MRT,KR Bus Terminal,Tuesday,12:00:00,10 - 15 minutes,Neutral,Neutral,Neutral,Neutral,Neutral,3.0
-A1,KR MRT,KR Bus Terminal,Thursday,12:00:00,10 - 15 minutes,Neutral,Neutral,Neutral,Neutral,Neutral,3.0
-D1,COM3,UTown,Monday,15:00:00,10 - 15 minutes,Satisfied,Very Satisfied,Very Satisfied,Neutral,Very Satisfied,2.0
-A2,Opp KR MRT,Ventus,Tuesday,09:30:00,10 - 15 minutes,Dissatisfied,Satisfied,Satisfied,Dissatisfied,Satisfied,5.0
-D1,AS5,COM3,Tuesday,13:30:00,10 - 15 minutes,Neutral,Dissatisfied,Satisfied,Neutral,Very Satisfied,2.0
-D2,PGP Terminal,UTown,Monday,15:45:45,10 - 15 minutes,Satisfied,Satisfied,Very Satisfied,Neutral,Satisfied,4.0
-A1,KR MRT,KR Bus Terminal,Monday,07:45:45,< 5 minutes,Very dissatisfied,Very dissatisfied,Very dissatisfied,Very dissatisfied,Very dissatisfied,1.0
-D2,COM3,KR MRT,Monday,17:00:00,5 - 10 minutes,Satisfied,Satisfied,Very Satisfied,Dissatisfied,Neutral,2.0
-A1,KR MRT,LT27,Thursday,13:30:00,< 5 minutes,Very dissatisfied,Satisfied,Satisfied,Dissatisfied,Satisfied,5.0
-D1,UTown,CLB,Wednesday,15:00:00,5 - 10 minutes,Very dissatisfied,Dissatisfied,Satisfied,Satisfied,Neutral,3.0
-D2,UTown,Opp University Hall,Tuesday,17:45:00,15 - 20 minutes,Very dissatisfied,Very dissatisfied,Satisfied,Dissatisfied,Neutral,5.0
-D2,UTown,Opp University Hall,Friday,17:45:00,15 - 20 minutes,Very dissatisfied,Very dissatisfied,Satisfied,Dissatisfied,Neutral,5.0
-D1,UTown,BIZ2,Tuesday,10:50:00,10 - 15 minutes,Very dissatisfied,Satisfied,Very Satisfied,Very Satisfied,Dissatisfied,2.0
-D1,UTown,CLB,Tuesday,11:50:00,5 - 10 minutes,Dissatisfied,Dissatisfied,Satisfied,Satisfied,Neutral,4.0
-D1,UTown,CLB,Thursday,11:50:00,5 - 10 minutes,Dissatisfied,Dissatisfied,Satisfied,Satisfied,Neutral,4.0
-A2,Opp University Hall,S17,Tuesday,09:00:00,5 - 10 minutes,Neutral,Neutral,Satisfied,Neutral,Satisfied,4.0
-A2,Opp University Hall,S17,Thursday,09:00:00,5 - 10 minutes,Neutral,Neutral,Satisfied,Neutral,Satisfied,4.0
-D2,Opp KR MRT,COM3,Thursday,17:42:17,5 - 10 minutes,Dissatisfied,Satisfied,Satisfied,Neutral,Dissatisfied,4.0
-A1,KR MRT,LT27,Friday,17:45:00,< 5 minutes,Satisfied,Satisfied,Very Satisfied,Neutral,Satisfied,2.0
-A1,KR MRT,LT27,Monday,11:30:00,< 5 minutes,Dissatisfied,Satisfied,Satisfied,Very Satisfied,Very Satisfied,4.0
-A1,KR MRT,LT27,Tuesday,11:30:00,< 5 minutes,Dissatisfied,Satisfied,Satisfied,Very Satisfied,Very Satisfied,4.0
-A1,KR MRT,LT27,Wednesday,11:30:00,< 5 minutes,Dissatisfied,Satisfied,Satisfied,Very Satisfied,Very Satisfied,4.0
-A1,KR MRT,LT27,Thursday,11:30:00,< 5 minutes,Dissatisfied,Satisfied,Satisfied,Very Satisfied,Very Satisfied,4.0
-A1,KR MRT,LT27,Friday,11:30:00,< 5 minutes,Dissatisfied,Satisfied,Satisfied,Very Satisfied,Very Satisfied,4.0
-A1,KR MRT,CLB,Monday,11:45:00,10 - 15 minutes,Dissatisfied,Neutral,Satisfied,Dissatisfied,Neutral,5.0
-A1,KR MRT,CLB,Tuesday,11:45:00,10 - 15 minutes,Dissatisfied,Neutral,Satisfied,Dissatisfied,Neutral,5.0
-D2,KR MRT,UTown,Tuesday,11:30:00,10 - 15 minutes,Very dissatisfied,Neutral,Satisfied,Dissatisfied,Dissatisfied,4.0
-A1,KR MRT,CLB,Tuesday,11:30:00,10 - 15 minutes,Dissatisfied,Neutral,Satisfied,Dissatisfied,Neutral,5.0
-A2,S17,Opp KR MRT,Monday,20:15:00,< 5 minutes,Satisfied,Satisfied,Satisfied,Satisfied,Satisfied,3.0
-D1,UTown,BIZ2,Friday,11:40:00,5 - 10 minutes,Satisfied,Very Satisfied,Very Satisfied,Very Satisfied,Very Satisfied,5.0
-A2,Opp KR MRT,Opp NUSS,Tuesday,11:45:00,10 - 15 minutes,Dissatisfied,Satisfied,Satisfied,Dissatisfied,Neutral,4.0
-A1,KR MRT,CLB,Monday,08:45:00,10 - 15 minutes,Satisfied,Satisfied,Satisfied,Neutral,Dissatisfied,2.0
-A2,Opp KR MRT,Ventus,Thursday,11:30:00,10 - 15 minutes,Dissatisfied,Satisfied,Satisfied,Satisfied,Dissatisfied,5.0
-D2,KR MRT,Museum,Wednesday,17:00:00,5 - 10 minutes,Neutral,Satisfied,Very Satisfied,Satisfied,Satisfied,4.0
+A2,Opp HSSML,Ventus,Monday,09:30:00,15 - 20 minutes,Neutral,Neutral,Very Satisfied,Satisfied,Satisfied,3
+D2,KR MRT,UTown,Monday,09:30:00,10 - 15 minutes,Satisfied,Satisfied,Satisfied,Satisfied,Satisfied,4
+A2,IT,S17,Thursday,17:50:00,< 5 minutes,Very Satisfied,Satisfied,Satisfied,Satisfied,Very Satisfied,4
+A1,PGP Terminal,KR MRT,Friday,11:30:00,10 - 15 minutes,Very Satisfied,Very Satisfied,Very Satisfied,Neutral,Very Satisfied,4
+A1,KR MRT,LT27,Tuesday,07:50:00,< 5 minutes,Neutral,Satisfied,Satisfied,Satisfied,Satisfied,5
+D2,UTown,Opp KR MRT,Friday,17:00:00,10 - 15 minutes,Neutral,Satisfied,Very Satisfied,Satisfied,Satisfied,4
+A2,Opp KR MRT,Opp HSSML,Friday,11:40:00,10 - 15 minutes,Neutral,Satisfied,Satisfied,Neutral,Satisfied,4
+A1,BIZ2,KR MRT,Wednesday,20:00:00,10 - 15 minutes,Satisfied,Satisfied,Satisfied,Neutral,Satisfied,2
+A1,BIZ2,KR MRT,Thursday,20:00:00,10 - 15 minutes,Satisfied,Satisfied,Satisfied,Neutral,Satisfied,2
+A1,BIZ2,KR MRT,Friday,20:00:00,10 - 15 minutes,Satisfied,Satisfied,Satisfied,Neutral,Satisfied,2
+A2,Opp KR MRT,Opp HSSML,Monday,11:50:00,5 - 10 minutes,Dissatisfied,Satisfied,Satisfied,Dissatisfied,Satisfied,5
+A1,KR MRT,CLB,Thursday,09:40:00,20 - 30 minutes,Dissatisfied,Satisfied,Satisfied,Neutral,Dissatisfied,5
+A2,Opp KR MRT,Opp HSSML,Friday,14:30:00,10 - 15 minutes,Dissatisfied,Dissatisfied,Satisfied,Neutral,Satisfied,4
+A1,BIZ2,KR MRT,Wednesday,14:45:00,5 - 10 minutes,Dissatisfied,Neutral,Neutral,Dissatisfied,Neutral,5
+A1,LT13,LT27,Friday,16:00:00,10 - 15 minutes,Satisfied,Satisfied,Satisfied,Satisfied,Satisfied,3
+A2,Opp KR MRT,Opp HSSML,Thursday,08:10:00,10 - 15 minutes,Neutral,Satisfied,Satisfied,Neutral,Satisfied,5
+A1,KR MRT,CLB,Monday,10:45:00,5 - 10 minutes,Neutral,Dissatisfied,Satisfied,Neutral,Satisfied,3
+A1,KR MRT,CLB,Thursday,10:45:00,5 - 10 minutes,Neutral,Dissatisfied,Satisfied,Neutral,Satisfied,3
+A2,Opp KR MRT,Opp HSSML,Tuesday,09:45:00,5 - 10 minutes,Satisfied,Satisfied,Satisfied,Satisfied,Satisfied,4
+D2,Museum,UTown,Wednesday,18:15:00,< 5 minutes,Satisfied,Satisfied,Satisfied,Satisfied,Satisfied,2
+A1,KR MRT,LT27,Thursday,09:00:00,10 - 15 minutes,Satisfied,Satisfied,Very Satisfied,Neutral,Neutral,4
+A1,KR MRT,CLB,Monday,09:30:00,5 - 10 minutes,Satisfied,Satisfied,Satisfied,Satisfied,Satisfied,4
+A1,KR MRT,CLB,Thursday,09:30:00,5 - 10 minutes,Satisfied,Satisfied,Satisfied,Satisfied,Satisfied,4
+A1,KR MRT,LT27,Wednesday,17:40:00,5 - 10 minutes,Satisfied,Satisfied,Satisfied,Neutral,Neutral,4
+D2,Opp KR MRT,COM3,Thursday,09:30:00,15 - 20 minutes,Neutral,Satisfied,Very Satisfied,Very Satisfied,Satisfied,3
+D2,Opp KR MRT,COM3,Friday,09:30:00,15 - 20 minutes,Neutral,Satisfied,Very Satisfied,Very Satisfied,Satisfied,3
+A2,Opp KR MRT,Ventus,Monday,09:35:00,10 - 15 minutes,Satisfied,Satisfied,Satisfied,Satisfied,Satisfied,4
+A2,Opp KR MRT,Ventus,Wednesday,09:35:00,10 - 15 minutes,Satisfied,Satisfied,Satisfied,Satisfied,Satisfied,4
+BTC (Bukit Timah Campus),Oei Tiong Ham Building (BTC),CLB,Monday,13:00:00,> 30 minutes,Satisfied,Satisfied,Satisfied,Satisfied,Satisfied,3
+D1,UTown,COM3,Monday,18:42:17,5 - 10 minutes,Dissatisfied,Satisfied,Very Satisfied,Neutral,Satisfied,5
+A1,KR MRT,LT27,Monday,07:50:00,5 - 10 minutes,Neutral,Neutral,Neutral,Neutral,Neutral,5
+BTC (Bukit Timah Campus),KR MRT,CLB,Thursday,10:30:00,10 - 15 minutes,Neutral,Neutral,Satisfied,Neutral,Satisfied,4
+BTC (Bukit Timah Campus),KR MRT,CLB,Friday,10:30:00,10 - 15 minutes,Neutral,Neutral,Satisfied,Neutral,Satisfied,4
+D2,KR MRT,UTown,Monday,13:00:00,10 - 15 minutes,Neutral,Neutral,Neutral,Dissatisfied,Dissatisfied,4
+A1,PGP Terminal,CLB,Saturday,12:00:00,15 - 20 minutes,Very dissatisfied,Neutral,Neutral,Neutral,Dissatisfied,1
+A2,Opp KR MRT,TCOMS,Tuesday,13:00:00,5 - 10 minutes,Dissatisfied,Neutral,Neutral,Very dissatisfied,Very dissatisfied,5
+A1,YIH,CLB,Monday,15:30:00,< 5 minutes,Very Satisfied,Satisfied,Very Satisfied,Satisfied,Very Satisfied,2
+A1,YIH,CLB,Friday,15:30:00,< 5 minutes,Very Satisfied,Satisfied,Very Satisfied,Satisfied,Very Satisfied,2
+A2,KR Bus Terminal,Opp KR MRT,Thursday,09:00:00,10 - 15 minutes,Satisfied,Very Satisfied,Very Satisfied,Neutral,Satisfied,1
+D2,KR MRT,LT27,Wednesday,10:45:45,5 - 10 minutes,Dissatisfied,Neutral,Satisfied,Satisfied,Satisfied,5
+D2,UTown,S17,Tuesday,12:30:00,5 - 10 minutes,Satisfied,Satisfied,Satisfied,Neutral,Satisfied,5
+D2,UTown,COM3,Monday,11:35:00,15 - 20 minutes,Satisfied,Satisfied,Satisfied,Neutral,Satisfied,5
+D2,LT27,UTown,Monday,13:50:00,5 - 10 minutes,Neutral,Satisfied,Satisfied,Neutral,Neutral,5
+D2,PGP Terminal,UTown,Tuesday,16:30:00,15 - 20 minutes,Dissatisfied,Neutral,Satisfied,Satisfied,Satisfied,4
+D2,PGP Terminal,UTown,Thursday,16:30:00,15 - 20 minutes,Dissatisfied,Neutral,Satisfied,Satisfied,Satisfied,4
+A1,KR MRT,CLB,Monday,11:35:00,10 - 15 minutes,Dissatisfied,Neutral,Satisfied,Very dissatisfied,Neutral,5
+A1,KR MRT,CLB,Tuesday,11:35:00,10 - 15 minutes,Dissatisfied,Neutral,Satisfied,Very dissatisfied,Neutral,5
+D2,UTown,Opp KR MRT,Monday,13:42:17,15 - 20 minutes,Dissatisfied,Satisfied,Satisfied,Neutral,Neutral,5
+D2,UTown,Opp KR MRT,Thursday,13:42:17,15 - 20 minutes,Dissatisfied,Satisfied,Satisfied,Neutral,Neutral,5
+A1,KR MRT,CLB,Tuesday,09:00:00,10 - 15 minutes,Neutral,Satisfied,Satisfied,Dissatisfied,Satisfied,5
+A2,Opp KR MRT,Ventus,Monday,11:40:00,15 - 20 minutes,Dissatisfied,Dissatisfied,Satisfied,Neutral,Satisfied,5
+A2,Opp KR MRT,Ventus,Tuesday,11:40:00,15 - 20 minutes,Dissatisfied,Dissatisfied,Satisfied,Neutral,Satisfied,5
+A1,KR Bus Terminal,LT27,Monday,09:00:00,10 - 15 minutes,Dissatisfied,Dissatisfied,Satisfied,Satisfied,Satisfied,4
+A1,KR Bus Terminal,LT27,Thursday,09:00:00,10 - 15 minutes,Dissatisfied,Dissatisfied,Satisfied,Satisfied,Satisfied,4
+D2,Opp KR MRT,TCOMS,Monday,08:00:00,10 - 15 minutes,Dissatisfied,Neutral,Satisfied,Satisfied,Satisfied,5
+D2,Opp KR MRT,TCOMS,Tuesday,08:00:00,10 - 15 minutes,Dissatisfied,Neutral,Satisfied,Satisfied,Satisfied,5
+D2,Opp KR MRT,TCOMS,Wednesday,08:00:00,10 - 15 minutes,Dissatisfied,Neutral,Satisfied,Satisfied,Satisfied,5
+A1,KR MRT,CLB,Monday,11:40:00,15 - 20 minutes,Dissatisfied,Satisfied,Neutral,Neutral,Satisfied,5
+A2,Opp KR MRT,Ventus,Tuesday,09:40:00,15 - 20 minutes,Dissatisfied,Neutral,Satisfied,Neutral,Satisfied,4
+A2,Opp KR MRT,Ventus,Wednesday,09:40:00,15 - 20 minutes,Dissatisfied,Neutral,Satisfied,Neutral,Satisfied,4
+A2,Opp KR MRT,Ventus,Friday,09:40:00,15 - 20 minutes,Dissatisfied,Neutral,Satisfied,Neutral,Satisfied,4
+D2,KR MRT,UTown,Monday,09:40:00,10 - 15 minutes,Satisfied,Satisfied,Satisfied,Satisfied,Satisfied,5
+D2,KR MRT,UTown,Thursday,09:40:00,10 - 15 minutes,Satisfied,Satisfied,Satisfied,Satisfied,Satisfied,5
+D2,KR MRT,UTown,Monday,11:30:00,10 - 15 minutes,Satisfied,Satisfied,Satisfied,Satisfied,Satisfied,5
+A2,Opp KR MRT,Opp HSSML,Tuesday,12:00:00,10 - 15 minutes,Satisfied,Satisfied,Satisfied,Satisfied,Very Satisfied,2
+A2,Opp KR MRT,Opp HSSML,Thursday,12:00:00,10 - 15 minutes,Satisfied,Satisfied,Satisfied,Satisfied,Very Satisfied,2
+A1,KR MRT,LT27,Thursday,11:45:00,< 5 minutes,Neutral,Satisfied,Very Satisfied,Dissatisfied,Satisfied,4
+A1,KR MRT,CLB,Wednesday,11:30:00,15 - 20 minutes,Dissatisfied,Dissatisfied,Satisfied,Satisfied,Satisfied,5
+A1,LT27,KR Bus Terminal,Wednesday,07:45:00,5 - 10 minutes,Satisfied,Satisfied,Satisfied,Satisfied,Satisfied,2
+A1,KR MRT,CLB,Wednesday,16:00:00,10 - 15 minutes,Satisfied,Satisfied,Satisfied,Neutral,Satisfied,5
+A1,LT27,CLB,Tuesday,14:45:00,5 - 10 minutes,Dissatisfied,Neutral,Satisfied,Dissatisfied,Neutral,4
+A1,LT27,CLB,Thursday,14:45:00,5 - 10 minutes,Dissatisfied,Neutral,Satisfied,Dissatisfied,Neutral,4
+A1,CLB,KR Bus Terminal,Tuesday,12:00:00,10 - 15 minutes,Neutral,Neutral,Neutral,Neutral,Neutral,3
+A1,CLB,KR Bus Terminal,Thursday,12:00:00,10 - 15 minutes,Neutral,Neutral,Neutral,Neutral,Neutral,3
+D1,COM3,UTown,Monday,15:00:00,10 - 15 minutes,Satisfied,Very Satisfied,Very Satisfied,Neutral,Very Satisfied,2
+A2,Opp KR MRT,Ventus,Tuesday,09:30:00,10 - 15 minutes,Dissatisfied,Satisfied,Satisfied,Dissatisfied,Satisfied,5
+D1,UTown,COM3,Tuesday,13:30:00,10 - 15 minutes,Neutral,Dissatisfied,Satisfied,Neutral,Very Satisfied,2
+D2,PGP Terminal,UTown,Monday,15:45:45,10 - 15 minutes,Satisfied,Satisfied,Very Satisfied,Neutral,Satisfied,4
+A1,KR MRT,CLB,Monday,07:45:45,< 5 minutes,Very dissatisfied,Very dissatisfied,Very dissatisfied,Very dissatisfied,Very dissatisfied,1
+D2,COM3,KR MRT,Monday,17:00:00,5 - 10 minutes,Satisfied,Satisfied,Very Satisfied,Dissatisfied,Neutral,2
+A1,KR MRT,LT27,Thursday,13:30:00,< 5 minutes,Very dissatisfied,Satisfied,Satisfied,Dissatisfied,Satisfied,5
+D1,UTown,CLB,Wednesday,15:00:00,5 - 10 minutes,Very dissatisfied,Dissatisfied,Satisfied,Satisfied,Neutral,3
+D2,UTown,Opp University Hall,Tuesday,17:45:00,15 - 20 minutes,Very dissatisfied,Very dissatisfied,Satisfied,Dissatisfied,Neutral,5
+D2,UTown,Opp University Hall,Friday,17:45:00,15 - 20 minutes,Very dissatisfied,Very dissatisfied,Satisfied,Dissatisfied,Neutral,5
+D1,UTown,BIZ2,Tuesday,10:50:00,10 - 15 minutes,Very dissatisfied,Satisfied,Very Satisfied,Very Satisfied,Dissatisfied,2
+D1,UTown,CLB,Tuesday,11:50:00,5 - 10 minutes,Dissatisfied,Dissatisfied,Satisfied,Satisfied,Neutral,4
+D1,UTown,CLB,Thursday,11:50:00,5 - 10 minutes,Dissatisfied,Dissatisfied,Satisfied,Satisfied,Neutral,4
+A2,IT,S17,Tuesday,09:00:00,5 - 10 minutes,Neutral,Neutral,Satisfied,Neutral,Satisfied,4
+A2,IT,S17,Thursday,09:00:00,5 - 10 minutes,Neutral,Neutral,Satisfied,Neutral,Satisfied,4
+D2,Opp KR MRT,COM3,Thursday,17:42:17,5 - 10 minutes,Dissatisfied,Satisfied,Satisfied,Neutral,Dissatisfied,4
+A1,KR MRT,LT27,Friday,17:45:00,< 5 minutes,Satisfied,Satisfied,Very Satisfied,Neutral,Satisfied,2
+A1,KR MRT,LT27,Monday,11:30:00,< 5 minutes,Dissatisfied,Satisfied,Satisfied,Very Satisfied,Very Satisfied,4
+A1,KR MRT,LT27,Tuesday,11:30:00,< 5 minutes,Dissatisfied,Satisfied,Satisfied,Very Satisfied,Very Satisfied,4
+A1,KR MRT,LT27,Wednesday,11:30:00,< 5 minutes,Dissatisfied,Satisfied,Satisfied,Very Satisfied,Very Satisfied,4
+A1,KR MRT,LT27,Thursday,11:30:00,< 5 minutes,Dissatisfied,Satisfied,Satisfied,Very Satisfied,Very Satisfied,4
+A1,KR MRT,LT27,Friday,11:30:00,< 5 minutes,Dissatisfied,Satisfied,Satisfied,Very Satisfied,Very Satisfied,4
+A1,KR MRT,CLB,Monday,11:45:00,10 - 15 minutes,Dissatisfied,Neutral,Satisfied,Dissatisfied,Neutral,5
+A1,KR MRT,CLB,Tuesday,11:45:00,10 - 15 minutes,Dissatisfied,Neutral,Satisfied,Dissatisfied,Neutral,5
+D2,KR MRT,UTown,Tuesday,11:30:00,10 - 15 minutes,Very dissatisfied,Neutral,Satisfied,Dissatisfied,Dissatisfied,4
+A1,KR MRT,CLB,Tuesday,11:30:00,10 - 15 minutes,Dissatisfied,Neutral,Satisfied,Dissatisfied,Neutral,5
+A2,S17,Opp KR MRT,Monday,20:15:00,< 5 minutes,Satisfied,Satisfied,Satisfied,Satisfied,Satisfied,3
+D1,UTown,BIZ2,Friday,11:40:00,5 - 10 minutes,Satisfied,Very Satisfied,Very Satisfied,Very Satisfied,Very Satisfied,5
+A2,Opp KR MRT,Opp NUSS,Tuesday,11:45:00,10 - 15 minutes,Dissatisfied,Satisfied,Satisfied,Dissatisfied,Neutral,4
+A1,KR MRT,CLB,Monday,08:45:00,10 - 15 minutes,Satisfied,Satisfied,Satisfied,Neutral,Dissatisfied,2
+A2,Opp KR MRT,Ventus,Thursday,11:30:00,10 - 15 minutes,Dissatisfied,Satisfied,Satisfied,Satisfied,Dissatisfied,5
+D2,KR MRT,LT27,Wednesday,17:00:00,5 - 10 minutes,Neutral,Satisfied,Very Satisfied,Satisfied,Satisfied,4
 D2,KR MRT,COM3,Friday,10:30:00,5 - 10 minutes,Neutral,Neutral,Very Satisfied,Satisfied,Satisfied,4.0
 A2,IT,Opp KR MRT,Thursday,20:42:17,15 - 20 minutes,Satisfied,Satisfied,Satisfied,Satisfied,Satisfied,5.0
-K,S17,Opp KR MRT,Wednesday,18:45:45,< 5 minutes,Satisfied,Satisfied,Satisfied,Satisfied,Satisfied,3.0
+D2,S17,Opp KR MRT,Wednesday,18:45:45,< 5 minutes,Satisfied,Satisfied,Satisfied,Satisfied,Satisfied,3.0
 D2,PGP Foyer,COM3,Sunday,12:45:45,15 - 20 minutes,Neutral,Very Satisfied,Very Satisfied,Neutral,Satisfied,3.0
 A2,S17,Opp KR MRT,Thursday,13:05:00,< 5 minutes,Neutral,Satisfied,Satisfied,Satisfied,Satisfied,3.0
 A1,CLB,KR Bus Terminal,Monday,14:30:00,10 - 15 minutes,Satisfied,Satisfied,Very Satisfied,Very Satisfied,Satisfied,1.0
@@ -117,11 +117,9 @@ A1,BIZ2,KR MRT,Tuesday,17:45:00,10 - 15 minutes,Dissatisfied,Satisfied,Satisfied
 D1,IT,UTown,Friday,11:40:00,10 - 15 minutes,Neutral,Satisfied,Satisfied,Satisfied,Neutral,4.0
 A2,Opp KR MRT,Opp HSSML,Monday,08:15:00,10 - 15 minutes,Dissatisfied,Dissatisfied,Satisfied,Neutral,Satisfied,5.0
 A1,BIZ2,KR MRT,Friday,14:45:00,5 - 10 minutes,Dissatisfied,Neutral,Neutral,Dissatisfied,Neutral,5.0
-A1,LT13,CLB,Wednesday,13:50:00,5 - 10 minutes,Satisfied,Satisfied,Neutral,Very Satisfied,Very Satisfied,5.0
-A1,LT13,CLB,Thursday,13:50:00,5 - 10 minutes,Satisfied,Satisfied,Neutral,Very Satisfied,Very Satisfied,5.0
 A1,BIZ2,KR MRT,Monday,18:42:17,5 - 10 minutes,Satisfied,Satisfied,Satisfied,Neutral,Neutral,2.0
 A1,BIZ2,KR MRT,Tuesday,18:42:17,5 - 10 minutes,Satisfied,Satisfied,Satisfied,Neutral,Neutral,2.0
-D1,LT13,COM3,Tuesday,10:45:00,5 - 10 minutes,Satisfied,Satisfied,Satisfied,Neutral,Neutral,2.0
+D1,AS5,COM3,Tuesday,10:45:00,5 - 10 minutes,Satisfied,Satisfied,Satisfied,Neutral,Neutral,2.0
 D2,COM3,KR MRT,Wednesday,20:42:17,5 - 10 minutes,Neutral,Satisfied,Very Satisfied,Very Satisfied,Satisfied,4.0
 D2,Opp UHC,UTown,Friday,13:50:00,< 5 minutes,Satisfied,Satisfied,Satisfied,Satisfied,Satisfied,3.0
 K,KR MRT,LT27,Thursday,09:00:00,5 - 10 minutes,Neutral,Neutral,Neutral,Neutral,Neutral,3.0
@@ -130,19 +128,17 @@ D2,KR MRT,LT27,Tuesday,16:45:00,5 - 10 minutes,Satisfied,Satisfied,Satisfied,Neu
 A2,IT,S17,Monday,18:42:17,10 - 15 minutes,Dissatisfied,Satisfied,Very Satisfied,Very Satisfied,Satisfied,5.0
 A1,LT13,LT27,Tuesday,16:42:17,10 - 15 minutes,Satisfied,Satisfied,Satisfied,Satisfied,Satisfied,5.0
 D2,Opp KR MRT,COM3,Tuesday,09:30:00,5 - 10 minutes,Satisfied,Satisfied,Satisfied,Satisfied,Satisfied,1.0
-A1,LT13,LT27,Monday,18:42:17,5 - 10 minutes,Satisfied,Satisfied,Very Satisfied,Neutral,Satisfied,4.0
+A1,KR MRT,LT27,Monday,18:42:17,5 - 10 minutes,Satisfied,Satisfied,Very Satisfied,Neutral,Satisfied,4.0
 D2,LT27,UTown,Monday,09:45:00,10 - 15 minutes,Neutral,Neutral,Neutral,Neutral,Neutral,5.0
 A1,KR MRT,CLB,Monday,10:30:00,10 - 15 minutes,Neutral,Neutral,Satisfied,Neutral,Satisfied,4.0
 A1,KR MRT,CLB,Wednesday,10:30:00,10 - 15 minutes,Neutral,Neutral,Satisfied,Neutral,Satisfied,4.0
 A1,KR MRT,CLB,Tuesday,17:00:00,10 - 15 minutes,Dissatisfied,Dissatisfied,Satisfied,Satisfied,Neutral,3.0
-A2,Opp KR MRT,PGP Foyer,Wednesday,15:00:00,15 - 20 minutes,Very dissatisfied,Neutral,Neutral,Neutral,Very Satisfied,1.0
-A2,Opp KR MRT,PGP Foyer,Thursday,15:00:00,15 - 20 minutes,Very dissatisfied,Neutral,Neutral,Neutral,Very Satisfied,1.0
+A2,Opp University Hall,PGP Foyer,Wednesday,15:00:00,15 - 20 minutes,Very dissatisfied,Neutral,Neutral,Neutral,Satisfied,1.0
+A2,Opp University Hall,PGP Foyer,Thursday,15:00:00,15 - 20 minutes,Very dissatisfied,Neutral,Neutral,Neutral,Satisfied,1.0
 D1,IT,UTown,Thursday,14:00:00,5 - 10 minutes,Dissatisfied,Neutral,Neutral,Very dissatisfied,Very dissatisfied,5.0
-A2,Opp KR MRT,Ventus,Friday,15:00:00,10 - 15 minutes,Neutral,Satisfied,Very Satisfied,Very dissatisfied,Satisfied,3.0
 A1,KR MRT,KR Bus Terminal,Wednesday,18:30:00,15 - 20 minutes,Satisfied,Satisfied,Satisfied,Neutral,Satisfied,4.0
 K,LT27,CLB,Monday,10:45:45,10 - 15 minutes,Dissatisfied,Neutral,Satisfied,Satisfied,Satisfied,5.0
 K,LT27,CLB,Friday,10:45:45,10 - 15 minutes,Dissatisfied,Neutral,Satisfied,Satisfied,Satisfied,5.0
-A2,Museum,S17,Tuesday,16:42:17,15 - 20 minutes,Dissatisfied,Satisfied,Satisfied,Neutral,Satisfied,5.0
 D2,COM3,LT27,Monday,13:45:00,10 - 15 minutes,Satisfied,Satisfied,Very Satisfied,Very Satisfied,Very Satisfied,3.0
 D1,UTown,CLB,Thursday,16:00:00,5 - 10 minutes,Satisfied,Satisfied,Satisfied,Neutral,Satisfied,2.0
 D2,PGP Foyer,COM3,Monday,11:45:00,< 5 minutes,Dissatisfied,Neutral,Satisfied,Satisfied,Satisfied,5.0
@@ -153,11 +149,8 @@ D1,UTown,CLB,Thursday,09:50:00,5 - 10 minutes,Dissatisfied,Satisfied,Neutral,Sat
 D1,UTown,CLB,Friday,09:50:00,5 - 10 minutes,Dissatisfied,Satisfied,Neutral,Satisfied,Satisfied,5.0
 K,KR MRT,CLB,Monday,09:00:00,10 - 15 minutes,Neutral,Satisfied,Satisfied,Very dissatisfied,Neutral,5.0
 K,KR MRT,CLB,Thursday,09:00:00,10 - 15 minutes,Neutral,Satisfied,Satisfied,Very dissatisfied,Neutral,5.0
-D1,YIH,CLB,Friday,15:35:00,10 - 15 minutes,Very dissatisfied,Satisfied,Very Satisfied,Satisfied,Satisfied,5.0
-D1,YIH,CLB,Sunday,15:35:00,10 - 15 minutes,Very dissatisfied,Satisfied,Very Satisfied,Satisfied,Satisfied,5.0
 A2,KR Bus Terminal,S17,Thursday,09:00:00,10 - 15 minutes,Dissatisfied,Dissatisfied,Satisfied,Satisfied,Satisfied,5.0
 A2,KR Bus Terminal,S17,Friday,09:00:00,10 - 15 minutes,Dissatisfied,Dissatisfied,Satisfied,Satisfied,Satisfied,5.0
-D2,KR MRT,COM3,Thursday,09:00:00,10 - 15 minutes,Dissatisfied,Dissatisfied,Neutral,Very Satisfied,Neutral,1.0
 D2,KR MRT,UTown,Tuesday,13:30:00,20 - 30 minutes,Dissatisfied,Neutral,Neutral,Neutral,Satisfied,5.0
 A1,KR MRT,CLB,Tuesday,09:40:00,20 - 30 minutes,Very dissatisfied,Dissatisfied,Satisfied,Neutral,Satisfied,5.0
 A1,KR MRT,CLB,Friday,09:40:00,20 - 30 minutes,Very dissatisfied,Dissatisfied,Satisfied,Neutral,Satisfied,5.0
@@ -165,21 +158,19 @@ A1,KR MRT,CLB,Thursday,09:40:00,15 - 20 minutes,Dissatisfied,Satisfied,Satisfied
 D2,UTown,S17,Monday,13:50:00,5 - 10 minutes,Dissatisfied,Neutral,Neutral,Neutral,Satisfied,5.0
 D2,Opp KR MRT,COM3,Monday,13:42:17,10 - 15 minutes,Dissatisfied,Satisfied,Satisfied,Satisfied,Very Satisfied,4.0
 D2,LT27,UTown,Friday,13:50:00,10 - 15 minutes,Neutral,Satisfied,Satisfied,Dissatisfied,Neutral,5.0
-A2,IT,Opp HSSML,Tuesday,14:45:45,15 - 20 minutes,Very dissatisfied,Very dissatisfied,Satisfied,Satisfied,Satisfied,4.0
-A2,IT,Opp HSSML,Friday,14:45:45,15 - 20 minutes,Very dissatisfied,Very dissatisfied,Satisfied,Satisfied,Satisfied,4.0
+A2,IT,UHC,Tuesday,14:45:45,15 - 20 minutes,Very dissatisfied,Very dissatisfied,Satisfied,Satisfied,Satisfied,4.0
+A2,IT,UHC,Friday,14:45:45,15 - 20 minutes,Very dissatisfied,Very dissatisfied,Satisfied,Satisfied,Satisfied,4.0
 A2,KR Bus Terminal,S17,Wednesday,07:45:45,15 - 20 minutes,Neutral,Neutral,Very Satisfied,Satisfied,Satisfied,2.0
 A2,IT,Opp KR MRT,Thursday,18:00:00,10 - 15 minutes,Satisfied,Satisfied,Satisfied,Neutral,Satisfied,5.0
 A2,IT,Opp KR MRT,Friday,18:00:00,10 - 15 minutes,Satisfied,Satisfied,Satisfied,Neutral,Satisfied,5.0
 D1,CLB,BIZ2,Monday,10:00:00,5 - 10 minutes,Satisfied,Satisfied,Satisfied,Satisfied,Satisfied,1.0
-A2,PGP Foyer,Opp NUSS,Friday,12:00:00,10 - 15 minutes,Neutral,Neutral,Neutral,Neutral,Neutral,3.0
+A2,PGP Foyer,KR Bus Terminal,Friday,12:00:00,10 - 15 minutes,Neutral,Neutral,Neutral,Neutral,Neutral,3.0
 D2,COM3,UTown,Friday,15:00:00,10 - 15 minutes,Satisfied,Satisfied,Satisfied,Neutral,Satisfied,2.0
 D2,COM3,UTown,Sunday,15:00:00,10 - 15 minutes,Satisfied,Satisfied,Satisfied,Neutral,Satisfied,2.0
 D2,Opp KR MRT,COM3,Monday,15:35:00,5 - 10 minutes,Dissatisfied,Dissatisfied,Satisfied,Dissatisfied,Very Satisfied,2.0
 D1,IT,UTown,Monday,13:40:00,5 - 10 minutes,Dissatisfied,Dissatisfied,Satisfied,Very dissatisfied,Neutral,5.0
-D2,Opp KR MRT,TCOMS,Friday,20:00:00,5 - 10 minutes,Dissatisfied,Neutral,Satisfied,Dissatisfied,Very dissatisfied,4.0
 A1,CLB,KR Bus Terminal,Monday,07:45:45,< 5 minutes,Very dissatisfied,Very dissatisfied,Very dissatisfied,Very dissatisfied,Very dissatisfied,1.0
 D2,KR MRT,UTown,Monday,13:35:00,15 - 20 minutes,Dissatisfied,Satisfied,Satisfied,Dissatisfied,Dissatisfied,5.0
-A2,PGP Foyer,Ventus,Thursday,17:00:00,20 - 30 minutes,Dissatisfied,Neutral,Very Satisfied,Neutral,Neutral,2.0
 D1,IT,UTown,Wednesday,20:00:00,5 - 10 minutes,Very dissatisfied,Very dissatisfied,Satisfied,Satisfied,Neutral,5.0
 D2,University Hall,UTown,Tuesday,19:45:00,5 - 10 minutes,Neutral,Satisfied,Very Satisfied,Satisfied,Neutral,1.0
 D2,University Hall,UTown,Friday,19:45:00,5 - 10 minutes,Neutral,Satisfied,Very Satisfied,Satisfied,Neutral,1.0
@@ -188,104 +179,63 @@ D1,IT,UTown,Tuesday,13:45:00,5 - 10 minutes,Dissatisfied,Neutral,Satisfied,Satis
 D1,IT,UTown,Thursday,13:45:00,5 - 10 minutes,Dissatisfied,Neutral,Satisfied,Satisfied,Neutral,5.0
 D1,CLB,AS5,Thursday,15:00:00,10 - 15 minutes,Neutral,Neutral,Neutral,Neutral,Neutral,3.0
 D1,CLB,AS5,Friday,15:00:00,10 - 15 minutes,Neutral,Neutral,Neutral,Neutral,Neutral,3.0
-D1,Opp NUSS,CLB,Monday,14:30:00,20 - 30 minutes,Neutral,Satisfied,Neutral,Very dissatisfied,Neutral,1.0
-D2,UTown,COM3,Tuesday,07:45:45,15 - 20 minutes,Satisfied,Satisfied,Satisfied,Satisfied,Satisfied,5.0
 D2,KR MRT,LT27,Monday,11:30:00,< 5 minutes,Dissatisfied,Satisfied,Very Satisfied,Very Satisfied,Satisfied,4.0
 D2,KR MRT,LT27,Tuesday,11:30:00,< 5 minutes,Dissatisfied,Satisfied,Very Satisfied,Very Satisfied,Satisfied,4.0
 D2,KR MRT,LT27,Wednesday,11:30:00,< 5 minutes,Dissatisfied,Satisfied,Very Satisfied,Very Satisfied,Satisfied,4.0
 D2,KR MRT,LT27,Thursday,11:30:00,< 5 minutes,Dissatisfied,Satisfied,Very Satisfied,Very Satisfied,Satisfied,4.0
 D2,KR MRT,LT27,Friday,11:30:00,< 5 minutes,Dissatisfied,Satisfied,Very Satisfied,Very Satisfied,Satisfied,4.0
-A1,KR MRT,Opp UHC,Wednesday,16:42:17,< 5 minutes,Satisfied,Neutral,Satisfied,Neutral,Satisfied,5.0
-A2,TCOMS,Ventus,Monday,17:45:45,10 - 15 minutes,Very dissatisfied,Neutral,Satisfied,Very dissatisfied,Very Satisfied,5.0
 D2,KR MRT,UTown,Tuesday,11:40:00,10 - 15 minutes,Dissatisfied,Dissatisfied,Neutral,Dissatisfied,Satisfied,5.0
 D2,UTown,S17,Thursday,11:40:00,5 - 10 minutes,Very Satisfied,Very Satisfied,Very Satisfied,Very Satisfied,Very Satisfied,5.0
 A2,Opp KR MRT,Opp HSSML,Monday,09:40:00,10 - 15 minutes,Satisfied,Very Satisfied,Very Satisfied,Very Satisfied,Very Satisfied,3.0
-D2,COM3,COM3,Friday,14:45:45,10 - 15 minutes,Satisfied,Very dissatisfied,Satisfied,Very Satisfied,Neutral,5.0
 K,KR MRT,CLB,Tuesday,08:45:00,10 - 15 minutes,Dissatisfied,Satisfied,Satisfied,Neutral,Dissatisfied,2.0
-A2,Opp HSSML,KR Bus Terminal,Tuesday,15:00:00,10 - 15 minutes,Dissatisfied,Satisfied,Satisfied,Satisfied,Very dissatisfied,1.0
 D2,PGP Terminal,KR MRT,Wednesday,17:45:45,5 - 10 minutes,Neutral,Satisfied,Very Satisfied,Satisfied,Satisfied,2.0
 D2,COM3,LT27,Tuesday,14:30:00,10 - 15 minutes,Dissatisfied,Dissatisfied,Very Satisfied,Very Satisfied,Satisfied,3.0
 D2,UTown,Opp KR MRT,Wednesday,11:30:00,10 - 15 minutes,Satisfied,Satisfied,Satisfied,Satisfied,Satisfied,5.0
-A1,KR MRT,YIH,Wednesday,18:55:00,< 5 minutes,Very Satisfied,Very Satisfied,Very Satisfied,Satisfied,Satisfied,4.0
+A1,KR MRT,CLB,Wednesday,18:55:00,< 5 minutes,Very Satisfied,Very Satisfied,Very Satisfied,Satisfied,Satisfied,4.0
 A2,PGP Foyer,Ventus,Monday,11:30:00,15 - 20 minutes,Very dissatisfied,Very Satisfied,Very Satisfied,Neutral,Neutral,5.0
 D2,KR MRT,LT27,Friday,07:50:00,< 5 minutes,Neutral,Satisfied,Satisfied,Satisfied,Satisfied,5.0
 K,S17,Opp KR MRT,Monday,20:15:00,< 5 minutes,Neutral,Satisfied,Very Satisfied,Satisfied,Satisfied,5.0
 A1,BIZ2,KR MRT,Monday,11:30:00,15 - 20 minutes,Neutral,Neutral,Satisfied,Neutral,Satisfied,5.0
 D1,UTown,BIZ2,Wednesday,20:45:45,10 - 15 minutes,Satisfied,Satisfied,Satisfied,Neutral,Satisfied,3.0
-BTC (Bukit Timah Campus),UTown,CLB,Thursday,13:00:00,5 - 10 minutes,Satisfied,Neutral,Very Satisfied,Satisfied,Satisfied,1.0
 A1,KR MRT,LT27,Tuesday,09:40:00,20 - 30 minutes,Dissatisfied,Satisfied,Satisfied,Satisfied,Satisfied,5.0
-A2,Opp KR MRT,TCOMS,Thursday,19:42:17,10 - 15 minutes,Dissatisfied,Dissatisfied,Satisfied,Satisfied,Neutral,5.0
-BTC (Bukit Timah Campus),Botanic Gardens MRT (BTC),UTown,Monday,18:00:00,10 - 15 minutes,Satisfied,Neutral,Very Satisfied,Neutral,Satisfied,3.0
-D2,COM3,S17,Tuesday,09:40:00,10 - 15 minutes,Very dissatisfied,Very dissatisfied,Neutral,Dissatisfied,Satisfied,2.0
-D2,COM3,S17,Friday,09:40:00,10 - 15 minutes,Very dissatisfied,Very dissatisfied,Neutral,Dissatisfied,Satisfied,2.0
-D1,Opp NUSS,AS5,Friday,18:42:17,20 - 30 minutes,Dissatisfied,Dissatisfied,Satisfied,Neutral,Very Satisfied,3.0
 D2,Museum,Opp KR MRT,Monday,16:05:00,5 - 10 minutes,Dissatisfied,Neutral,Satisfied,Neutral,Satisfied,5.0
 A1,BIZ2,KR MRT,Thursday,20:30:00,5 - 10 minutes,Dissatisfied,Satisfied,Satisfied,Satisfied,Satisfied,4.0
-A1,CLB,KR Bus Terminal,Wednesday,08:45:45,5 - 10 minutes,Satisfied,Neutral,Satisfied,Satisfied,Satisfied,5.0
 D2,KR MRT,UTown,Thursday,08:45:45,10 - 15 minutes,Neutral,Neutral,Neutral,Neutral,Neutral,3.0
 D1,UTown,CLB,Monday,13:00:00,5 - 10 minutes,Satisfied,Satisfied,Satisfied,Satisfied,Satisfied,3.0
 D2,S17,Opp KR MRT,Wednesday,18:00:00,5 - 10 minutes,Neutral,Neutral,Neutral,Neutral,Neutral,5.0
 D2,UTown,Opp KR MRT,Wednesday,18:30:00,10 - 15 minutes,Dissatisfied,Satisfied,Very Satisfied,Very Satisfied,Satisfied,4.0
 A1,KR MRT,CLB,Monday,09:35:00,5 - 10 minutes,Satisfied,Satisfied,Satisfied,Satisfied,Satisfied,5.0
-D1,Opp HSSML,CLB,Wednesday,17:30:00,10 - 15 minutes,Satisfied,Satisfied,Satisfied,Satisfied,Satisfied,5.0
-D1,LT13,COM3,Monday,16:45:00,5 - 10 minutes,Satisfied,Satisfied,Very Satisfied,Satisfied,Neutral,2.0
-D2,Opp KR MRT,PGP Foyer,Wednesday,09:35:00,> 30 minutes,Dissatisfied,Dissatisfied,Satisfied,Satisfied,Neutral,1.0
+D1,Opp YIH,CLB,Wednesday,17:30:00,10 - 15 minutes,Satisfied,Satisfied,Satisfied,Satisfied,Satisfied,5.0
+D1,Opp YIH,COM3,Monday,16:45:00,5 - 10 minutes,Satisfied,Satisfied,Very Satisfied,Satisfied,Neutral,2.0
 D2,Museum,UTown,Friday,09:30:00,10 - 15 minutes,Neutral,Neutral,Satisfied,Neutral,Satisfied,3.0
 D2,COM3,KR MRT,Wednesday,19:42:17,10 - 15 minutes,Dissatisfied,Neutral,Dissatisfied,Dissatisfied,Very dissatisfied,1.0
-D1,Opp HSSML,UTown,Monday,12:00:00,15 - 20 minutes,Dissatisfied,Neutral,Neutral,Neutral,Neutral,1.0
-D1,Museum,YIH,Monday,18:00:00,10 - 15 minutes,Dissatisfied,Satisfied,Satisfied,Satisfied,Satisfied,4.0
-D1,Museum,YIH,Tuesday,18:00:00,10 - 15 minutes,Dissatisfied,Satisfied,Satisfied,Satisfied,Satisfied,4.0
-D1,Ventus,CLB,Thursday,11:30:00,< 5 minutes,Dissatisfied,Satisfied,Very Satisfied,Neutral,Dissatisfied,5.0
-D2,KR MRT,TCOMS,Wednesday,07:50:00,10 - 15 minutes,Satisfied,Dissatisfied,Very Satisfied,Satisfied,Neutral,4.0
+D1,Museum,UTown,Monday,12:00:00,15 - 20 minutes,Dissatisfied,Neutral,Neutral,Neutral,Neutral,1.0
 D1,Opp YIH,UTown,Tuesday,10:45:45,15 - 20 minutes,Dissatisfied,Neutral,Satisfied,Satisfied,Satisfied,4.0
-D2,COM3,KR MRT,Wednesday,09:00:00,> 30 minutes,Satisfied,Very Satisfied,Very Satisfied,Very dissatisfied,Satisfied,5.0
-K,LT27,Opp KR MRT,Wednesday,08:45:45,10 - 15 minutes,Dissatisfied,Very dissatisfied,Satisfied,Satisfied,Satisfied,5.0
-A1,KR MRT,LT27,Monday,09:00:00,10 - 15 minutes,Very dissatisfied,Satisfied,Satisfied,Satisfied,Satisfied,4.0
 A1,PGP Terminal,KR MRT,Friday,18:30:00,5 - 10 minutes,Dissatisfied,Neutral,Satisfied,Satisfied,Satisfied,5.0
-A1,AS5,CLB,Monday,16:45:00,5 - 10 minutes,Dissatisfied,Neutral,Very dissatisfied,Dissatisfied,Neutral,3.0
-E,IT,UTown,Friday,14:00:00,< 5 minutes,Very dissatisfied,Satisfied,Satisfied,Satisfied,Satisfied,5.0
+E,IT,UTown,Friday,14:00:00,< 5 minutes,Very dissatisfied,Satisfied,Satisfied,Satisfied,Satisfied,3.0
 D2,Opp KR MRT,COM3,Wednesday,09:00:00,10 - 15 minutes,Dissatisfied,Satisfied,Satisfied,Neutral,Satisfied,4.0
-D1,IT,UTown,Wednesday,09:00:00,5 - 10 minutes,Neutral,Satisfied,Neutral,Satisfied,Neutral,3.0
 D1,LT13,COM3,Wednesday,09:00:00,10 - 15 minutes,Dissatisfied,Dissatisfied,Satisfied,Satisfied,Satisfied,5.0
-D2,S17,COM3,Wednesday,18:30:00,15 - 20 minutes,Very dissatisfied,Dissatisfied,Satisfied,Satisfied,Neutral,4.0
 A2,Opp KR MRT,Ventus,Thursday,11:40:00,15 - 20 minutes,Very dissatisfied,Neutral,Neutral,Neutral,Satisfied,5.0
 A2,IT,Opp KR MRT,Tuesday,15:42:17,20 - 30 minutes,Dissatisfied,Neutral,Satisfied,Neutral,Satisfied,5.0
 A2,IT,Opp KR MRT,Friday,15:42:17,20 - 30 minutes,Dissatisfied,Neutral,Satisfied,Neutral,Satisfied,5.0
 BTC (Bukit Timah Campus),Botanic Gardens MRT (BTC),UTown,Monday,09:20:00,20 - 30 minutes,Very dissatisfied,Neutral,Very Satisfied,Very Satisfied,Very Satisfied,1.0
-D2,KR MRT,Opp UHC,Friday,19:00:00,< 5 minutes,Dissatisfied,Neutral,Neutral,Neutral,Satisfied,5.0
-A2,Opp KR MRT,PGP Foyer,Thursday,09:30:00,10 - 15 minutes,Dissatisfied,Satisfied,Satisfied,Satisfied,Very Satisfied,5.0
-D2,S17,TCOMS,Tuesday,09:40:00,20 - 30 minutes,Neutral,Neutral,Satisfied,Neutral,Satisfied,3.0
-A2,Opp University Hall,Opp NUSS,Tuesday,08:45:45,10 - 15 minutes,Very dissatisfied,Neutral,Very Satisfied,Neutral,Satisfied,3.0
+A2,Opp KR MRT,Opp HSSML,Thursday,09:30:00,10 - 15 minutes,Dissatisfied,Satisfied,Satisfied,Satisfied,Very Satisfied,5.0
 D2,LT27,UTown,Wednesday,07:45:45,10 - 15 minutes,Satisfied,Satisfied,Satisfied,Satisfied,Satisfied,5.0
 D2,KR MRT,UTown,Monday,18:00:00,10 - 15 minutes,Satisfied,Satisfied,Satisfied,Neutral,Satisfied,5.0
 D2,KR MRT,UTown,Tuesday,18:00:00,10 - 15 minutes,Satisfied,Satisfied,Satisfied,Neutral,Satisfied,5.0
-D2,University Hall,UTown,Thursday,17:00:00,5 - 10 minutes,Dissatisfied,Satisfied,Satisfied,Dissatisfied,Dissatisfied,5.0
-D1,CLB,AS5,Wednesday,14:00:00,10 - 15 minutes,Neutral,Neutral,Neutral,Neutral,Neutral,3.0
+D2,Opp UHC,UTown,Thursday,17:00:00,5 - 10 minutes,Dissatisfied,Satisfied,Satisfied,Dissatisfied,Dissatisfied,5.0
+D1,CLB,BIZ2,Wednesday,14:00:00,10 - 15 minutes,Neutral,Neutral,Neutral,Neutral,Neutral,3.0
 BTC (Bukit Timah Campus),CLB,College Green (BTC),Wednesday,15:15:00,> 30 minutes,Dissatisfied,Satisfied,Very Satisfied,Neutral,Satisfied,1.0
-D1,Museum,UTown,Monday,11:40:00,10 - 15 minutes,Neutral,Satisfied,Satisfied,Dissatisfied,Neutral,5.0
+D1,Ventus,UTown,Monday,11:40:00,10 - 15 minutes,Neutral,Satisfied,Satisfied,Dissatisfied,Neutral,5.0
 A1,LT13,KR MRT,Thursday,19:50:00,5 - 10 minutes,Very dissatisfied,Dissatisfied,Satisfied,Neutral,Neutral,4.0
-D2,S17,TCOMS,Wednesday,09:40:00,20 - 30 minutes,Dissatisfied,Dissatisfied,Very Satisfied,Satisfied,Satisfied,4.0
 A1,CLB,KR Bus Terminal,Monday,07:45:45,< 5 minutes,Very dissatisfied,Very dissatisfied,Very dissatisfied,Very dissatisfied,Very dissatisfied,1.0
-D1,BIZ2,COM3,Monday,08:45:45,15 - 20 minutes,Neutral,Neutral,Very dissatisfied,Very Satisfied,Satisfied,1.0
-D1,UTown,YIH,Wednesday,15:15:00,10 - 15 minutes,Dissatisfied,Neutral,Very Satisfied,Satisfied,Satisfied,5.0
-E,UTown,UTown,Monday,13:00:00,15 - 20 minutes,Dissatisfied,Satisfied,Satisfied,Very dissatisfied,Very dissatisfied,4.0
 D1,UTown,CLB,Friday,19:42:17,10 - 15 minutes,Neutral,Dissatisfied,Very Satisfied,Satisfied,Dissatisfied,4.0
 D1,UTown,CLB,Wednesday,11:50:00,5 - 10 minutes,Dissatisfied,Satisfied,Satisfied,Satisfied,Neutral,5.0
-D1,CLB,BIZ2,Friday,12:00:00,5 - 10 minutes,Dissatisfied,Satisfied,Satisfied,Satisfied,Satisfied,4.0
 BTC (Bukit Timah Campus),KR MRT,LT27,Monday,18:42:17,5 - 10 minutes,Neutral,Neutral,Neutral,Neutral,Neutral,4.0
-D2,KR MRT,LT27,Wednesday,14:30:00,15 - 20 minutes,Neutral,Satisfied,Satisfied,Neutral,Neutral,5.0
-A1,KR MRT,KR Bus Terminal,Friday,11:40:00,15 - 20 minutes,Very dissatisfied,Neutral,Satisfied,Very Satisfied,Satisfied,1.0
-D2,S17,Opp KR MRT,Monday,12:45:00,< 5 minutes,Neutral,Satisfied,Very Satisfied,Very Satisfied,Very Satisfied,3.0
-D2,S17,Opp KR MRT,Tuesday,12:45:00,< 5 minutes,Neutral,Satisfied,Very Satisfied,Very Satisfied,Very Satisfied,3.0
-D2,S17,Opp KR MRT,Wednesday,12:45:00,< 5 minutes,Neutral,Satisfied,Very Satisfied,Very Satisfied,Very Satisfied,3.0
-D2,S17,Opp KR MRT,Thursday,12:45:00,< 5 minutes,Neutral,Satisfied,Very Satisfied,Very Satisfied,Very Satisfied,3.0
-D2,S17,Opp KR MRT,Friday,12:45:00,< 5 minutes,Neutral,Satisfied,Very Satisfied,Very Satisfied,Very Satisfied,3.0
-D2,KR MRT,Opp KR MRT,Wednesday,09:00:00,< 5 minutes,Dissatisfied,Neutral,Very dissatisfied,Neutral,Dissatisfied,5.0
-D2,LT27,S17,Wednesday,14:30:00,10 - 15 minutes,Very dissatisfied,Satisfied,Satisfied,Neutral,Satisfied,2.0
-D1,IT,UTown,Wednesday,18:30:00,5 - 10 minutes,Satisfied,Satisfied,Satisfied,Dissatisfied,Neutral,5.0
+K,S17,Opp KR MRT,Monday,12:45:00,< 5 minutes,Neutral,Satisfied,Very Satisfied,Very Satisfied,Very Satisfied,3.0
+K,S17,Opp KR MRT,Tuesday,12:45:00,< 5 minutes,Neutral,Satisfied,Very Satisfied,Very Satisfied,Very Satisfied,3.0
+K,S17,Opp KR MRT,Wednesday,12:45:00,< 5 minutes,Neutral,Satisfied,Very Satisfied,Very Satisfied,Very Satisfied,3.0
+K,S17,Opp KR MRT,Thursday,12:45:00,< 5 minutes,Neutral,Satisfied,Very Satisfied,Very Satisfied,Very Satisfied,3.0
+K,S17,Opp KR MRT,Friday,12:45:00,< 5 minutes,Neutral,Satisfied,Very Satisfied,Very Satisfied,Very Satisfied,3.0
 BTC (Bukit Timah Campus),LT27,UTown,Tuesday,19:00:00,5 - 10 minutes,Very Satisfied,Very Satisfied,Very Satisfied,Very Satisfied,Very Satisfied,4.0
 A1,BIZ2,LT27,Monday,11:40:00,10 - 15 minutes,Neutral,Satisfied,Very Satisfied,Very Satisfied,Very Satisfied,5.0
-D2,KR MRT,TCOMS,Wednesday,08:45:45,10 - 15 minutes,Dissatisfied,Satisfied,Very Satisfied,Neutral,Dissatisfied,4.0
-D2,S17,COM3,Thursday,07:45:45,10 - 15 minutes,Neutral,Very Satisfied,Satisfied,Very Satisfied,Satisfied,4.0
-A2,IT,Opp HSSML,Monday,10:45:45,< 5 minutes,Dissatisfied,Satisfied,Satisfied,Neutral,Satisfied,4.0
-D2,PGP Terminal,Opp KR MRT,Wednesday,18:00:00,15 - 20 minutes,Dissatisfied,Neutral,Very Satisfied,Very Satisfied,Satisfied,4.0
