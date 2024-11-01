@@ -1,6 +1,5 @@
 ISB_Service,bus_stop_board,bus_stop_alight,day_of_the_week,time_start,travel_duration,frequency,punctuality,cleanliness,safety,coverage,crowdedness
 D2,KR MRT,UTown,Monday,09:30:00,10 - 15 minutes,Satisfied,Satisfied,Satisfied,Satisfied,Satisfied,4.0
-A1,KR MRT,LT27,Tuesday,07:50:00,< 5 minutes,Neutral,Satisfied,Satisfied,Satisfied,Satisfied,5.0
 D2,UTown,Opp KR MRT,Friday,17:00:00,10 - 15 minutes,Neutral,Satisfied,Very Satisfied,Satisfied,Satisfied,4.0
 A2,Opp KR MRT,Opp HSSML,Friday,11:40:00,10 - 15 minutes,Neutral,Satisfied,Satisfied,Neutral,Satisfied,4.0
 A1,BIZ2,KR MRT,Wednesday,20:00:00,10 - 15 minutes,Satisfied,Satisfied,Satisfied,Neutral,Satisfied,2.0
