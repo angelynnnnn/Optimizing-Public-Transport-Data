@@ -8,12 +8,8 @@ import math
 from datetime import datetime, time, timedelta
 import simpy
 import random
-import polyline
 
-
-# STREAMLIT APP
-
-# To run this, run "streamlit run main.py" in terminal (ensure streamlit is installed locally)
+MAPBOX_API = 'pk.eyJ1IjoiZ3VvaG9uZ3lpMTExIiwiYSI6ImNtMng0OHc4cTAwenMybG9iczg4cjBoNjcifQ.tc6o1kU_mTemKQhbVy5mNA'
 
 @st.cache_data
 def get_bus_stops():
@@ -27,13 +23,10 @@ MAP_CENTER = [1.3083003040174188, 103.79569430095988]
 KR_CENTER = [1.29782, 103.77711]
 
 st.header("NUS Internal Shuttle Bus Service")
-times = list(pd.date_range(start="07:00", end="23:00", freq="10min").time)
-time_to_show = st.select_slider(label='Time', options=times)
-bus_service = st.selectbox(label="Bus Service", options=['A1', 'A2', 'D1', 'D2', 'BTC', 'E', 'K'])
 
-# Read demand data
+# INPUT DATA HERE
 data = pd.read_csv('synthetic_data.csv')
-monday_data = data[data['day_of_the_week'] == 'Monday']
+monday_data = data[data['day_of_the_week'] == 'Monday'] # For simulation purposes, we will use data where the trips are done on Mondays
 
 monday_data['time_start'] = pd.to_datetime(monday_data['time_start'], format='%H:%M:%S')
 
@@ -46,7 +39,6 @@ monday_data = monday_data.drop(columns=['role', 'frequency_of_travel','primary_p
                           'issues_with_quality_of_info', 'special_events', 'seasonal_changes'])
 
 
-
 # Routes
 A1_bus = ['KR Bus Terminal', 'LT13', 'AS5', 'BIZ2', 'Opp TCOMS', 'PGP Terminal', 'KR MRT', 'LT27', 'University Hall', 'Opp UHC', 'YIH', 'CLB', 'KR Bus Terminal']
 A2_bus = ['KR Bus Terminal', 'IT', 'Opp YIH', 'Museum', 'UHC', 'Opp University Hall', 'S17', 'Opp KR MRT', 'PGP Foyer', 'TCOMS', 'Opp HSSML', 'Opp NUSS', 'Ventus', 'KR Bus Terminal']
@@ -57,16 +49,13 @@ E_bus = ['UTown', 'Raffles Hall', 'Kent Vale', 'EA', 'SDE3', 'IT', 'Opp YIH', 'U
 K_bus = ['PGP Terminal', 'KR MRT', 'LT27', 'University Hall', 'Opp UHC', 'YIH', 'CLB', 'Opp SDE3', 'The Japanese Primary School', 'Kent Vale', 'Museum', 'UHC', 'Opp University Hall', 'S17', 'Opp KR MRT', 'PGP Foyer']
 L_bus = ['Oei Tiong Ham Building (BTC)', 'Botanic Gardents MRT (BTC)', 'College Green (BTC)', 'Oei Tiong Ham Building (BTC)']
 
-bus_routes = {'A1':A1_bus, 'A2':A2_bus, 'D1':D1_bus, 'D2':D2_bus, 'BTC':BTC_bus, 'E':E_bus, 'K':K_bus, 'L':L_bus}
-
-MAPBOX_API = 'pk.eyJ1IjoiZ3VvaG9uZ3lpMTExIiwiYSI6ImNtMng0OHc4cTAwenMybG9iczg4cjBoNjcifQ.tc6o1kU_mTemKQhbVy5mNA'
+bus_routes = {'A1':A1_bus, 'A2':A2_bus, 'D1':D1_bus, 'D2':D2_bus, 'BTC':BTC_bus, 'E':E_bus, 'K':K_bus}
 
 @st.cache_data
-def bus_service_data(bus):
-    route = bus_routes[bus]
+def bus_service_data(route_lst):
 
-    stops = bus_stops[bus_stops['Bus Stop'].isin(route)]
-    route_df = pd.DataFrame({'Bus Stop': route})
+    stops = bus_stops[bus_stops['Bus Stop'].isin(route_lst)]
+    route_df = pd.DataFrame({'Bus Stop': route_lst})
     route_df['route_index'] = route_df.index
     bus_df = route_df.merge(stops, on='Bus Stop', how='left')
     bus_df.loc[bus_df['route_index']==0, 'color'] = 'red'
@@ -76,8 +65,9 @@ def bus_service_data(bus):
 
     return bus_df
 
+@st.cache_data
 def route_map(bus):
-    bus_df = bus_service_data(bus)
+    bus_df = bus_service_data(bus_routes[bus])
 
     # Place markers on map
     if bus == 'BTC':
@@ -95,6 +85,8 @@ def route_map(bus):
         response = requests.get(url)
         direction = response.json()
         bus_df.loc[i, 'duration_to_next'] = math.ceil(direction['routes'][0]['duration']/60) + 1
+        bus_df['minutes_from_start'] = bus_df['duration_to_next'].cumsum()
+        bus_df['minutes_from_start'] = bus_df['minutes_from_start'].shift(1, fill_value=0) # calculate the minutes from the terminal
 
         route_coords = [list(reversed(coord)) for coord in direction['routes'][0]['geometry']['coordinates']]
         folium.PolyLine(locations=route_coords,
@@ -121,10 +113,10 @@ def route_map(bus):
         
     return bus_df, map, merged
 
-st.dataframe(route_map(bus_service)[2])
-st_folium(route_map(bus_service)[1], width=800)
+# ====================================================================
 
 # SIMULATION
+# This simulation allows us to determine the minimum number of buses for each bus service required, so that every trip in the schedule will be fulfilled.
 
 st.subheader("Simulation")
 col1, col2 = st.columns(2)
@@ -135,7 +127,6 @@ with col2:
     num_buses = st.number_input('Number of buses', 1, 10)
 
 start_sim = st.button('Simulate')
-
 
 # Bus frequencies, taken from NUS UCI website 
 # (https://uci.nus.edu.sg/oca/mobilityservices/getting-around-nus/)
@@ -190,16 +181,19 @@ bus_freq = {
     }
 }
 
-# Sample bus schedule for each bus
-bus_timings = {}
-for bus in bus_freq.keys():
+def create_schedule(freq_dict, bus): # freq_dict is a dictionary with bus service as key and a dict of [start time, end time, freq] as values
+    bus_timings = {}
+    frequencies = freq_dict[bus]
     bus_timings[bus] = []
-    for t in range(len(bus_freq[bus])):
-        times = pd.date_range(start=bus_freq[bus][t][0], end=bus_freq[bus][t][1], freq=bus_freq[bus][t][2]).time.tolist()
-        if times[0] in bus_timings[bus]:
+    for t in range(len(frequencies)):
+        times = pd.date_range(start=frequencies[t][0], end=frequencies[t][1], freq=frequencies[t][2]).time.tolist()
+        if times[0] in bus_timings[bus]: # dont add timings that are already in list
             times = times[1:]
 
         bus_timings[bus] += times
+
+    return bus_timings # returns a dictionary with bus as key and a list of departure times (datetime object) as values
+    
 
 # Simulating bus schedule
 BUS_CAPACITY = 88
@@ -207,7 +201,7 @@ queue_buses = [i+1 for i in range(num_buses)] # so that buses leave the terminal
 sim_log = [] # store the strings of outputs
 passengers_served = 0
 
-sim_bus_timings = pd.DataFrame(bus_timings[sim_bus_service], columns=['depart_time'])
+sim_bus_timings = pd.DataFrame(create_schedule(bus_freq, sim_bus_service)[sim_bus_service], columns=['depart_time'])
 
 day_start = sim_bus_timings.loc[0, 'depart_time']
 day_end = time(23, 59)
@@ -235,7 +229,7 @@ def sim_time_to_actual(minutes):
 sim_bus_timings['minutes_from_start'] = sim_bus_timings['depart_time'].apply(time_from_start) # creates a column that gives the minutes from the first bus
 bus_data = route_map(sim_bus_service)[0] # contains route data with travel times to next stop
 
-def bus_route(env, bus_id, bus_df):
+def bus_route(env, bus_id, bus_df): # bus_df is a df of route data with travel times
     global passengers_served
     stop_index = 0
     onboard = 0
@@ -307,10 +301,9 @@ def bus_departure(env, bus_schedule):
 def main_sim():
     env = simpy.Environment()
 
-    env.process(bus_departure(env, sim_bus_timings))
+    env.process(bus_departure(env, sim_bus_timings)) # sim_bus_timings is a DF of the schedule created from create_schedules, with a column that has the minutes from start
     
     env.run(until=end_time)
-
 
 if start_sim:
     main_sim()
@@ -321,58 +314,146 @@ total_trips = len(sim_bus_timings)
 st.text_area("Simulation Log", "\n".join(sim_log), height=350)
 st.write(f'Number of trips not done: {unavailable_count}')
 st.write(f'Total number of trips: {total_trips}')
-st.write(f'Total passengers served: {passengers_served}')
+
 st.text('')
 st.text('')
 st.text('')
 
-# SIMULATION OF CREATED ROUTES
+# INPUT PREDICTED DEMAND DATA HERE
+predicted_demand = pd.read_csv("future_predicted_data.csv")
+predicted_demand['predicted_count'] = predicted_demand['predicted_count'].apply(math.ceil)
+predicted_demand['ISB_Service'] = predicted_demand['ISB_Service'].replace('BTC (Bukit Timah Campus)', 'BTC')
+predicted_demand['time_start'] = pd.to_datetime(predicted_demand['time_start']).dt.time
 
-bus_stops_names = bus_stops.loc[:, 'Bus Stop']
+st.subheader('Optimal Route')
+day_to_sim = st.selectbox('Day of Week', ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'])
 
-if 'available_options' not in st.session_state:
-    st.session_state['available_options'] = bus_stops_names
-if 'selected_options' not in st.session_state:
-    st.session_state['selected_options'] = []
+start_time = st.time_input('Start Time', value=None, key='start')
+end_time = st.time_input('End Time', value=None, key='end')
+optimize = st.button('Optimize')
 
-st.session_state['selected_options'] = st.multiselect(label='Create a route:', options=st.session_state['available_options'], default=st.session_state['selected_options'], 
-                              placeholder='Choose bus stops')
+# Create a list of timings that will reach a bus stop
+def stop_schedule(bus_schedule, minutes): # minutes is the time required to reach the bus stop from the terminal
+    if minutes == 0:
+        return bus_schedule
+    
+    schedule = []
+    for t in bus_schedule:
+        new_t = datetime.combine(datetime.today(), t) + timedelta(minutes=minutes)
+        schedule.append(new_t.time())
 
-@st.cache_data
-def create_simulated_route(stops):
-    def approaches(stops):
-        s = 'curb'
-        result = ';'.join([s]*len(stops))
-        return result
+    return schedule
 
-    chosen_stops_df = bus_stops[bus_stops['Bus Stop'].isin(stops)]
-    chosen_stops_df['coordinates'] = chosen_stops_df['lon'].astype(str) + "," + chosen_stops_df['lat'].astype(str)
-    all_coords = ';'.join(chosen_stops_df['coordinates'])
+# algorithm for route optimization is the calculation of satisfaction score
 
-    sim_url = f"https://api.mapbox.com/optimized-trips/v1/mapbox/driving/{all_coords}?roundtrip=false&source=first&destination=last&approaches={approaches(stops)}&steps=true&access_token={MAPBOX_API}"
-    response = requests.get(sim_url)
-    directions = response.json()
-    # st.write(directions)
-    optimized_route = directions['trips'][0]['geometry']
-    markers_in_order = pd.DataFrame({'coords': [list(reversed(wp['location'])) for wp in directions['waypoints']],
-                        'order': [wp['waypoint_index'] for wp in directions['waypoints']]})
+def buses_at_bus_stops():
+    bus_stops_dict = {stops: [] for stops in bus_stops['Bus Stop']}
+    for stops in bus_stops_dict.keys():
+        for bus, route_list in bus_routes.items():
+            if stops in route_list and bus not in bus_stops_dict[stops]:
+                bus_stops_dict[stops].append(bus)
 
-    # Plot optimized route onto map
-    decoded_route = polyline.decode(optimized_route)
-    # start = decoded_route[0]
-    map = folium.Map(location=KR_CENTER, zoom_start=15)
-    folium.PolyLine(decoded_route, weight=3).add_to(map)
+    return bus_stops_dict
 
-    for i in range(len(markers_in_order)):
-        folium.Marker(markers_in_order.loc[i, 'coords'], popup=f"Waypoint {i+1}").add_to(map)
+def generate_schedule(bus_stop, bus):
+    bus_df = route_map(bus)[0]
+    minutes = bus_df.loc[bus_df['Bus Stop'] == bus_stop, 'minutes_from_start'].values[0]
 
-    return map
+    return stop_schedule(create_schedule(bus_freq, bus)[bus], minutes)
 
-# st.write("Note: The first stop chosen will be the starting stop, and the last stop chosen will be the destination.")
+def get_next_bus_time(curr_time, bus_stop, bus):
+    schedule = generate_schedule(bus_stop, bus)
+    next_times = [bus_time for bus_time in schedule if bus_time >= curr_time]
+    return min(next_times) if next_times else None
 
-chosen_stops = st.session_state['selected_options']
+def time_diff(time1, time2):
+    dt_time1 = datetime.combine(datetime.today(), time1)
+    dt_time2 = datetime.combine(datetime.today(), time2)
 
-if len(chosen_stops) >= 2:
-    st_folium(create_simulated_route(chosen_stops), width=800)
-else:
-    st.write('Please choose a minimum of 2 stops and maximum of 12 stops.')
+    return (dt_time2 - dt_time1).total_seconds() / 60
+
+demand_by_day = predicted_demand[predicted_demand['day_of_the_week'] == day_to_sim]
+bus_dict = buses_at_bus_stops()
+
+def get_density_scores(bus_stop):
+    buses = bus_dict[bus_stop]
+    time_range = pd.date_range(start=datetime.combine(datetime.today(), start_time), end=datetime.combine(datetime.today(), end_time), freq='T').time
+    density_df = pd.DataFrame(0, index=time_range, columns=buses)
+    for bus in buses:
+        for t in density_df.index:
+            t_data = demand_by_day[(demand_by_day['time_start'] == t) & (demand_by_day['ISB_Service'] == bus)]
+            density_df.at[t, bus] += t_data.loc[t_data['bus_stop_board'] == bus_stop, 'predicted_count'].values[0]
+        
+    for bus in buses:
+        schedule = generate_schedule(bus_stop, bus)
+        cum_sum = 0
+        for t in density_df.index:
+            cum_sum += density_df.loc[t, bus]
+            if t in schedule:
+                cum_sum = 0
+            density_df.at[t, bus] = cum_sum
+
+    density_df = density_df.drop(columns=[col for col in ['K', 'E', 'BTC'] if col in density_df.columns], errors='ignore')
+
+    density_df['Total'] = density_df.sum(axis=1)
+
+    def assign_scores(total):
+        if 0 <= total <= 20:
+            return total * 1
+        elif 21 <= total <= 40:
+            return total * 2
+        elif 41 <= total <= 60:
+            return total * 3
+        elif 61 <= total <= 80:
+            return total * 4
+        elif 81 <= total <= 100:
+            return total * 5
+        else:
+            return total * 6
+
+    density_df['Score'] = density_df['Total'].apply(assign_scores)
+            
+    return density_df
+
+
+def get_satisfaction_scores(day):
+    # Create dictionary to store number of people waiting and the scores
+    waittime_dict = {
+        stop_name: {bus: 0 for bus in bus_routes.keys()} for stop_name in bus_stops['Bus Stop'] # metric score
+    }
+    demand_by_day = predicted_demand[predicted_demand['day_of_the_week'] == day]
+    demand_by_day_time = demand_by_day[demand_by_day['time_start'].between(start_time, end_time)]
+    bus_stops_buses = buses_at_bus_stops()
+
+    def get_entries(stop, bus):
+        entries = demand_by_day_time[(demand_by_day_time['ISB_Service']==bus) & (demand_by_day_time['bus_stop_board']==stop)].copy()
+        entries['next_bus'] = entries.apply(lambda r: get_next_bus_time(r['time_start'], r['bus_stop_board'], r['ISB_Service']), axis=1)
+        entries['minutes_to_next_bus'] = entries.apply(lambda r: time_diff(r['time_start'], r['next_bus']), axis=1)
+
+        return entries
+
+    for stop in bus_stops_buses.keys():
+        for bus in bus_stops_buses[stop]:
+            entries = get_entries(stop, bus)
+
+            total_waiting_time = (entries['predicted_count'] * entries['minutes_to_next_bus']).sum()
+            waittime_dict[stop][bus] = total_waiting_time
+
+    return waittime_dict
+
+def get_priority_score(score_dict):
+    priority_dict = {}
+    for stop in score_dict.keys():
+        priority_dict[stop] = score_dict[stop]['A1'] + score_dict[stop]['A2'] + score_dict[stop]['D1'] + score_dict[stop]['D2']
+        density_scores = get_density_scores(stop)
+        priority_dict[stop] += density_scores['Score'].sum()
+
+    priority_dict = dict(sorted(priority_dict.items(), key=lambda item: item[1], reverse=True))
+
+    return priority_dict
+
+if optimize:
+    scores = get_priority_score(get_satisfaction_scores(day_to_sim))
+    top_5 = sorted(scores, key=scores.get, reverse=True)[:5]
+    st.write(f'The top 5 bus stops are: {", ".join(top_5)}')
+
