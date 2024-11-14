@@ -8,6 +8,7 @@ import math
 from datetime import datetime, time, timedelta
 import simpy
 import random
+import polyline
 
 MAPBOX_API = 'pk.eyJ1IjoiZ3VvaG9uZ3lpMTExIiwiYSI6ImNtMng0OHc4cTAwenMybG9iczg4cjBoNjcifQ.tc6o1kU_mTemKQhbVy5mNA'
 
@@ -94,24 +95,7 @@ def route_map(bus):
                 weight=3,
                 smooth_factor=0.1).add_to(map)
         
-    # Show demand for each bus stop
-    global time_to_show
-
-    selected_time_data = monday_data[(monday_data['time_start'] == time_to_show) & (monday_data['ISB_Service'] == bus)]
-    values_to_plot = selected_time_data['bus_stop_board'].value_counts()
-    merged = pd.merge(values_to_plot, bus_stops, left_on='bus_stop_board', right_on='Bus Stop')
-
-    for _, row in merged.iterrows():
-        folium.Circle(
-            location=[row['lat'], row['lon']],
-            radius=row['count']*4,
-            color=None,
-            fill=True,
-            fill_color='purple',
-            fill_opacity=0.5,
-        ).add_to(map)
-        
-    return bus_df, map, merged
+    return bus_df, map
 
 # ====================================================================
 
@@ -330,7 +314,10 @@ day_to_sim = st.selectbox('Day of Week', ['Monday', 'Tuesday', 'Wednesday', 'Thu
 
 start_time = st.time_input('Start Time', value=None, key='start')
 end_time = st.time_input('End Time', value=None, key='end')
-optimize = st.button('Optimize')
+if "optimize" not in st.session_state:
+    st.session_state.optimize = False
+if st.button("Optimize"):
+    st.session_state.optimize = True
 
 # Create a list of timings that will reach a bus stop
 def stop_schedule(bus_schedule, minutes): # minutes is the time required to reach the bus stop from the terminal
@@ -377,7 +364,7 @@ bus_dict = buses_at_bus_stops()
 
 def get_density_scores(bus_stop):
     buses = bus_dict[bus_stop]
-    time_range = pd.date_range(start=datetime.combine(datetime.today(), start_time), end=datetime.combine(datetime.today(), end_time), freq='T').time
+    time_range = pd.date_range(start=datetime.combine(datetime.today(), start_time), end=datetime.combine(datetime.today(), end_time), freq='1min').time
     density_df = pd.DataFrame(0, index=time_range, columns=buses)
     for bus in buses:
         for t in density_df.index:
@@ -452,8 +439,36 @@ def get_priority_score(score_dict):
 
     return priority_dict
 
-if optimize:
+def create_simulated_route(stops):
+    def approaches(stops):
+        s = 'curb'
+        result = ';'.join([s]*len(stops))
+        return result
+    
+    chosen_stops_df = bus_stops[bus_stops['Bus Stop'].isin(stops)]
+    chosen_stops_df['coordinates'] = chosen_stops_df['lon'].astype(str) + "," + chosen_stops_df['lat'].astype(str)
+    all_coords = ';'.join(chosen_stops_df['coordinates'])
+    sim_url = f"https://api.mapbox.com/optimized-trips/v1/mapbox/driving/{all_coords}?roundtrip=false&source=first&destination=last&approaches={approaches(stops)}&steps=true&access_token={MAPBOX_API}"
+    response = requests.get(sim_url)
+    directions = response.json()
+
+    optimized_route = directions['trips'][0]['geometry']
+    markers_in_order = pd.DataFrame({'coords': [list(reversed(wp['location'])) for wp in directions['waypoints']],
+                        'order': [wp['waypoint_index'] for wp in directions['waypoints']]})
+    
+    # Plot optimized route onto map
+    decoded_route = polyline.decode(optimized_route)
+    map = folium.Map(location=KR_CENTER, zoom_start=15)
+    folium.PolyLine(decoded_route, weight=3).add_to(map)
+    for i in range(len(markers_in_order)):
+        folium.Marker(markers_in_order.loc[i, 'coords'], popup=f"Waypoint {i+1}").add_to(map)
+
+    return map
+
+if st.session_state.optimize:
     scores = get_priority_score(get_satisfaction_scores(day_to_sim))
     top_5 = sorted(scores, key=scores.get, reverse=True)[:5]
     st.write(f'The top 5 bus stops are: {", ".join(top_5)}')
 
+st.write('Map of Express Route: ')
+st_folium(create_simulated_route(top_5), width=800)
