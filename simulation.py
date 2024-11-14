@@ -9,8 +9,9 @@ from datetime import datetime, time, timedelta
 import simpy
 import random
 import polyline
+import os
 
-MAPBOX_API = 'pk.eyJ1IjoiZ3VvaG9uZ3lpMTExIiwiYSI6ImNtMng0OHc4cTAwenMybG9iczg4cjBoNjcifQ.tc6o1kU_mTemKQhbVy5mNA'
+MAPBOX_API = os.getenv("MAPBOX_API")
 
 @st.cache_data
 def get_bus_stops():
@@ -583,5 +584,5 @@ if st.session_state.optimize:
     st.write(optimal_buses_needed)
     st.write(f'Total number of buses needed: {total_buses}')
 
-st.write('Map of Express Route: ')
-st_folium(create_simulated_route(top_5), width=800)
+    st.write('Map of Express Route: ')
+    st_folium(create_simulated_route(top_5), width=800)
