@@ -66,6 +66,35 @@ def bus_service_data(route_lst):
 
     return bus_df
 
+def get_route_timing(route, bus_stops_df):
+    route_df = pd.DataFrame({'Bus Stop': route})
+    route_df = route_df.merge(bus_stops_df, on='Bus Stop', how='left')
+    dir_coord = [(route_df['lon'].iloc[i], route_df['lat'].iloc[i]) for i in range(len(route_df))]
+    coords = ';'.join([f"{lon},{lat}" for lon, lat in dir_coord])
+    mapbox_url = f'https://api.mapbox.com/directions/v5/mapbox/driving/{coords}?alternatives=false&geometries=geojson&language=en&overview=full&steps=true&access_token={MAPBOX_API}'
+    response = requests.get(mapbox_url)
+    route_data = response.json()
+
+    if 'routes' in route_data and len(route_data['routes']) > 0:
+        segment_durations = []
+        for leg in route_data['routes'][0]['legs']:
+            segment_durations.append(leg['duration'])
+        total_duration_seconds = sum(segment_durations)
+        total_duration_minutes = total_duration_seconds / 60
+        return total_duration_minutes
+    else:
+        return None
+
+route_times = {
+    'A1': get_route_timing(A1_bus, bus_stops),
+    'A2': get_route_timing(A1_bus, bus_stops), 
+    'BTC': get_route_timing(BTC_bus, bus_stops),
+    'D1': get_route_timing(D1_bus, bus_stops),
+    'D2': get_route_timing(D2_bus, bus_stops),
+    'E': get_route_timing(E_bus, bus_stops),
+    'K': get_route_timing(K_bus, bus_stops),
+}
+
 @st.cache_data
 def route_map(bus):
     bus_df = bus_service_data(bus_routes[bus])
@@ -309,7 +338,7 @@ predicted_demand['predicted_count'] = predicted_demand['predicted_count'].apply(
 predicted_demand['ISB_Service'] = predicted_demand['ISB_Service'].replace('BTC (Bukit Timah Campus)', 'BTC')
 predicted_demand['time_start'] = pd.to_datetime(predicted_demand['time_start']).dt.time
 
-st.subheader('Optimal Route')
+st.subheader('Optimal Route and Bus Allocation')
 day_to_sim = st.selectbox('Day of Week', ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'])
 
 start_time = st.time_input('Start Time', value=None, key='start')
@@ -439,6 +468,85 @@ def get_priority_score(score_dict):
 
     return priority_dict
 
+def generate_time_intervals(start_time_str, end_time_str):
+    start_time = datetime.combine(datetime.today(), start_time_str)
+    end_time = datetime.combine(datetime.today(), end_time_str)
+
+    # Generate the list of 15-minute intervals
+    time_intervals = []
+    current_time = start_time
+
+    while current_time < end_time:
+        time_intervals.append((current_time.hour, current_time.minute))
+        current_time += timedelta(minutes=15)
+
+    return time_intervals
+
+def get_demand(data):
+    demand_by_interval = data.groupby(['ISB_Service', 'day_of_the_week', 'hour', 'minute'])['predicted_count'].sum().reset_index(name='predicted_count')
+    return demand_by_interval
+
+
+## Function to calculate optimal bus allocation
+def optimize_buses_needed(data, route_times, bus_capacity):
+    max_demand_per_route = data.groupby(['ISB_Service', 'hour', 'minute'])['predicted_count'].max().reset_index(name='max_demand')
+
+    def calculate_buses_needed(row):
+        route_id = row['ISB_Service']
+        peak_demand = row['max_demand']
+        turnaround_time = route_times.get(route_id)
+        if turnaround_time is None or turnaround_time == 0:
+            return np.nan
+        trips_per_interval = (15 / turnaround_time)
+        buses_needed = np.ceil(np.ceil(peak_demand / bus_capacity) / trips_per_interval)
+        return buses_needed
+
+    max_demand_per_route['buses_needed'] = max_demand_per_route.apply(calculate_buses_needed, axis=1)
+    buses_per_interval = max_demand_per_route.groupby(['hour', 'minute'])['buses_needed'].sum().reset_index(name='min_buses_needed')
+    buses_needed_per_route = max_demand_per_route.groupby(['ISB_Service'])['buses_needed'].max().reset_index()
+
+    return buses_per_interval, buses_needed_per_route
+
+def consider_express(data, express, day, time, initial_ratio=0.2, increment=0.1):
+    EX_time = get_route_timing(express, bus_stops)
+    route_times['EX'] = EX_time
+    temp = data[data['day_of_the_week'] == day].copy()
+
+    # Get the optimal ratio of demand that would utilise the express bus
+    ratio = initial_ratio
+    optimal_buses_needed = None
+    optimal_ratio = None
+    min_total_buses = float('inf')
+    
+    while ratio <= 1.0:
+        adjusted_data = temp.copy()
+        for hour, minute in time:
+            for stop in express:
+                stop_demand = temp[(temp['hour'] == hour) & (temp['minute'] == minute) & (temp['bus_stop_board'] == stop)]['predicted_count'].sum()
+                express_demand = ratio * stop_demand
+                adjusted_data.loc[(adjusted_data['hour'] == hour) & (adjusted_data['minute'] == minute) & (adjusted_data['bus_stop_board'] == stop), 'predicted_count'] *= (1 - ratio)
+
+                new_row = pd.DataFrame({
+                    'ISB_Service': ['EX'],  # Assuming EX is the ID of the express bus
+                    'bus_stop_board': [stop],
+                    'day_of_the_week': [day],
+                    'hour': [hour],
+                    'minute': [minute],
+                    'predicted_count': [express_demand]
+                })
+                adjusted_data = pd.concat([adjusted_data, new_row], ignore_index=True)
+        
+        _, buses_needed_per_route = optimize_buses_needed(adjusted_data, route_times, BUS_CAPACITY)
+        total_buses = buses_needed_per_route['buses_needed'].sum()
+        
+        # Update the optimal ratio and bus count if this ratio reduces total buses
+        if total_buses < min_total_buses:
+            min_total_buses = total_buses
+            optimal_ratio = ratio
+            optimal_buses_needed = buses_needed_per_route
+        ratio += increment
+    return optimal_buses_needed, optimal_ratio, total_buses
+
 def create_simulated_route(stops):
     def approaches(stops):
         s = 'curb'
@@ -469,6 +577,11 @@ if st.session_state.optimize:
     scores = get_priority_score(get_satisfaction_scores(day_to_sim))
     top_5 = sorted(scores, key=scores.get, reverse=True)[:5]
     st.write(f'The top 5 bus stops are: {", ".join(top_5)}')
+    optimal_buses_needed, optimal_ratio, total_buses = consider_express(predicted_demand, top_5, day_to_sim, generate_time_intervals(start_time, end_time))
+
+    st.write(f'Optimal bus allocation:')
+    st.write(optimal_buses_needed)
+    st.write(f'Total number of buses needed: {total_buses}')
 
 st.write('Map of Express Route: ')
 st_folium(create_simulated_route(top_5), width=800)
