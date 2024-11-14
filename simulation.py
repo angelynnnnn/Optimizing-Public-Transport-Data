@@ -10,6 +10,10 @@ import simpy
 import random
 import polyline
 import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 MAPBOX_API = os.getenv("MAPBOX_API")
 
