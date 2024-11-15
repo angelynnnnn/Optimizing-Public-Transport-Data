@@ -187,7 +187,7 @@ Qn 2 : Run [QN2A](user_segmentation.ipynb) and [Q2A Evaluation](https://github.c
 
 Qm 3 : Run [QN3A](travel_patterns.ipynb) and [Q3A Evaluation](https://github.com/angelynnnnn/Optimizing-Public-Transport-Data/wiki/Modeling-&-Evaluation-Q3A) 
 
-Optional Q 1: Run [QN1AO](Optional-Subtask%201%20(Group%20A).ipynb) and [Q1A Evaluation](https://github.com/angelynnnnn/Optimizing-Public-Transport-Data/wiki/Modeling-&-Evaluation-Q1-Optional) 
+Optional Q 1: Run [QN1AO](Optional-Subtask%201%20(Group%20A).ipynb) and [Q1AO Evaluation](https://github.com/angelynnnnn/Optimizing-Public-Transport-Data/wiki/Modeling-&-Evaluation-Q1-Optional) 
 
 
 
