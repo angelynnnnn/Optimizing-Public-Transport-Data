@@ -121,7 +121,7 @@ Dataset : clean_data.csv
 | `seasonal_changes_specific`      | object    | Specific details about how seasonal changes impact shuttle service usage.                                      |
 | `further_comments`               | object    | Any additional feedback provided by the respondent.       |
 
-Dataset : bus_stops_coords. csv
+Dataset : bus_stops_coords.csv
 
 
 | Column Name | Data Type | Description |
@@ -130,33 +130,45 @@ Dataset : bus_stops_coords. csv
 | Latitude    | float     | Latitude coordinate of the bus stop. |
 | Longitude   | float     | Longitude coordinate of the bus stop. |
 
-Dataset : cleaned_routes
+Dataset : cleaned_routes.csv
 
 | Column Name        | Data Type | Description                                                                                      |
 |--------------------|-----------|--------------------------------------------------------------------------------------------------|
-| ISB_Service        | object    | Name of the shuttle service used for the trip.                                                   |
-| bus_stop_board     | object    | Boarding bus stop for the trip.                                                                  |
-| bus_stop_alight    | object    | Alighting bus stop for the trip.                                                                 |
-| day_of_the_week    | object    | Day of the week when the trip occurred.                                                          |
-| time_start         | time      | Start time of the trip.                                                                          |
-| travel_duration    | object    | Estimated travel duration for the trip.                                                          |
-| frequency          | object    | Satisfaction rating for frequency of the shuttle service.                                        |
-| punctuality        | object    | Satisfaction rating for punctuality of the shuttle service.                                      |
-| cleanliness        | object    | Satisfaction rating for cleanliness of the shuttle service.                                      |
-| safety             | object    | Satisfaction rating for safety of the shuttle service.                                           |
-| coverage           | object    | Satisfaction rating for route coverage of the shuttle service.                                   |
-| crowdedness        | int       | Satisfaction rating for crowdedness on the trip.                                                 |
+| `ISB_Service`      | object    | Name of the shuttle service used for the trip.                                                   |
+| `bus_stop_board `  | object    | Boarding bus stop for the trip.                                                                  |
+| `bus_stop_alight ` | object    | Alighting bus stop for the trip.                                                                 |
+| `day_of_the_week`  | object    | Day of the week when the trip occurred.                                                          |
+| `time_start`       | time      | Start time of the trip.                                                                          |
+| `travel_duration`  | object    | Estimated travel duration for the trip.                                                          |
+| `frequency`        | object    | Satisfaction rating for frequency of the shuttle service.                                        |
+| `punctuality`      | object    | Satisfaction rating for punctuality of the shuttle service.                                      |
+| `cleanliness`      | object    | Satisfaction rating for cleanliness of the shuttle service.                                      |
+| `safety`           | object    | Satisfaction rating for safety of the shuttle service.                                           |
+| `coverage`         | object    | Satisfaction rating for route coverage of the shuttle service.                                   |
+| `crowdedness`      | int       | Satisfaction rating for crowdedness on the trip.                                                 |
 
-Dataset : NLP_Analysis_Results
+Dataset : NLP_Analysis_Results.csv
 
 | Column Name       | Data Type | Description                                                                                                      |
 |-------------------|-----------|------------------------------------------------------------------------------------------------------------------|
-| Original Text     | object    | The original feedback text provided by the respondent.                                                           |
-| Processed Text    | object    | The processed version of the text, with keywords extracted for analysis.                                         |
-| Topic             | int       | The topic assigned to the text based on topic modeling.                                                          |
-| Cluster           | int       | The cluster assigned to the text based on clustering analysis.                                                   |
+| `Original Text`     | object    | The original feedback text provided by the respondent.                                                           |
+| `Processed Text`    | object    | The processed version of the text, with keywords extracted for analysis.                                         |
+| `Topic`             | int       | The topic assigned to the text based on topic modeling.                                                          |
+| `Cluster`           | int       | The cluster assigned to the text based on clustering analysis.                                                   |
 
+Dataset : future_predicted_data.csv
 
+| Column Name        | Data Type | Description                                                        |
+|--------------------|-----------|--------------------------------------------------------------------|
+| `ISB_Service`      | object    | Name of the shuttle service used for the trip.                     |
+| `bus_stop_board`   | object    | Boarding bus stop for the trip.                                    |
+| `day_of_the_week`  | object    | Day of the week when the trip occurred.                            | 
+| `is_weekend`       | int       | Binary variable for weekend                                        |
+| `is_peak`          | int       | Binary variable for peak timing                                    |
+| `hour`             | int       | Integer for hour                                                   |
+| `minute`           | int       | Integer for minute                                                 |
+| `time_start`       | object    | Start time of the trip.                                            |
+| `predicted_count`  | float     | Predicted count of passengers arriving at bus stop by minute       |
 
 
 # Endpoints
