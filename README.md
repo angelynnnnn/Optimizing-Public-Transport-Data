@@ -195,7 +195,7 @@ Optional Q 1: Run [QN1AO](Optional-Subtask%201%20(Group%20A).ipynb) and [Q1A Eva
 
 Qn 1 : Run [QN1B](demand_forecasting.ipynb) and [Q1B Evaluation](https://github.com/angelynnnnn/Optimizing-Public-Transport-Data/wiki/Modeling-&-Evaluation-Q1B) 
 
-Qn 2 : Run Streamlit below and [Q2B Evaluation](https://github.com/angelynnnnn/Optimizing-Public-Transport-Data/wiki/Modeling-&-Evaluation-Q2B) 
+Qn 2 : Run [QN3B](simulation.py) and [Q2B Evaluation](https://github.com/angelynnnnn/Optimizing-Public-Transport-Data/wiki/Modeling-&-Evaluation-Q2B) 
 
 Qn 3 : Run [QN3B](simulation.py) and [Q3B Evaluation](https://github.com/angelynnnnn/Optimizing-Public-Transport-Data/wiki/Modeling-&-Evaluation-Q3B) 
 
