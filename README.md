@@ -180,24 +180,24 @@ More Information about Synthetic Data Generation can be found [here](https://git
 
 ## Group Tasks
 
-### Subgroup A
-Qn 1 : Run [QN1A](grp_A_User_Satisfaction_Model.ipynb)
+### [Subgroup A Analysis](https://github.com/angelynnnnn/Optimizing-Public-Transport-Data/wiki/Analytical-Findings-Group-A) 
+Qn 1 : Run [QN1A](grp_A_User_Satisfaction_Model.ipynb) and [Q1A Evaluation](https://github.com/angelynnnnn/Optimizing-Public-Transport-Data/wiki/Modeling-&-Evaluation-Q1A) 
 
-Qn 2 : Run [QN2A](user_segmentation.ipynb)
+Qn 2 : Run [QN2A](user_segmentation.ipynb) and [Q2A Evaluation](https://github.com/angelynnnnn/Optimizing-Public-Transport-Data/wiki/Modeling-&-Evaluation-Q2A) 
 
-Qm 3 : Run [QN3A](travel_patterns.ipynb)
+Qm 3 : Run [QN3A](travel_patterns.ipynb) and [Q3A Evaluation](https://github.com/angelynnnnn/Optimizing-Public-Transport-Data/wiki/Modeling-&-Evaluation-Q3A) 
 
-Optional Q 1: Run [QN1AO](Optional-Subtask%201%20(Group%20A).ipynb)
+Optional Q 1: Run [QN1AO](Optional-Subtask%201%20(Group%20A).ipynb) and [Q1A Evaluation](https://github.com/angelynnnnn/Optimizing-Public-Transport-Data/wiki/Modeling-&-Evaluation-Q1-Optional) 
 
 
 
-### Subgroup B 
+### [Subgroup B Analysis](https://github.com/angelynnnnn/Optimizing-Public-Transport-Data/wiki/Analytical-Findings-Group-B) 
 
-Qn 1 : Run [QN1B](demand_forecasting.ipynb)
+Qn 1 : Run [QN1B](demand_forecasting.ipynb) and [Q1B Evaluation](https://github.com/angelynnnnn/Optimizing-Public-Transport-Data/wiki/Modeling-&-Evaluation-Q1B) 
 
-Qn 2 : Run Streamlit below 
+Qn 2 : Run Streamlit below and [Q2B Evaluation](https://github.com/angelynnnnn/Optimizing-Public-Transport-Data/wiki/Modeling-&-Evaluation-Q2B) 
 
-Qn 3 : Run [QN3B](simulation.py)
+Qn 3 : Run [QN3B](simulation.py) and [Q3B Evaluation](https://github.com/angelynnnnn/Optimizing-Public-Transport-Data/wiki/Modeling-&-Evaluation-Q3B) 
 
 # Running Streamlit
 To run the Streamlit app, you will need your own Mapbox API key.
