@@ -181,16 +181,23 @@ More Information about Synthetic Data Generation can be found [here](https://git
 ## Group Tasks
 
 ### Subgroup A
-Qn 1 : Run [THIS](grp_A_User_Satisfaction_Model.ipynb)
-Qn 2 : Run 
-Qm 3 : Run 
-Optional Q 1 : Run 
+Qn 1 : Run [QN1A](grp_A_User_Satisfaction_Model.ipynb)
+
+Qn 2 : Run [QN2A](user_segmentation.ipynb)
+
+Qm 3 : Run [QN3A](travel_patterns.ipynb)
+
+Optional Q 1: Run [QN1AO](Optional-Subtask%201%20(Group%20A).ipynb)
+
 
 
 ### Subgroup B 
-Qn 1 : Run 
-Qn 2 : Run 
-Qn 3 : Run 
+
+Qn 1 : Run [QN1B](demand_forecasting.ipynb)
+
+Qn 2 : Run Streamlit below 
+
+Qn 3 : Run [QN3B](simulation.py)
 
 # Running Streamlit
 To run the Streamlit app, you will need your own Mapbox API key.
