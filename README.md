@@ -187,6 +187,8 @@ Qn 3 : Run [QN3B](simulation.py) and [Q3B Evaluation](https://github.com/angelyn
 
 You can click [here](https://github.com/angelynnnnn/Optimizing-Public-Transport-Data/wiki/Technical-Implementation) for instructions to run our mainfile !
 
+## Running Our Program
+
 # Running Streamlit
 To run the Streamlit app, you will need your own Mapbox API key.
 
