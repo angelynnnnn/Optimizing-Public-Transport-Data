@@ -4,15 +4,15 @@ FROM python:3.10-slim
 # Set the working directory in the container
 WORKDIR /app
 
-# Copy the requirements file
-COPY requirements.txt .
+# Copy project files into the container
+COPY . /app
 
 # Upgrade pip and install dependencies
 RUN pip install --no-cache-dir --upgrade pip && \
     pip install --no-cache-dir -r requirements.txt
 
-# Copy the rest of the application code into the container
-COPY . .
+# Expose the Streamlit port
+EXPOSE 8501
 
 # Define the default command to run your main application
-CMD ["python", "main.py"]
+CMD ["streamlit", "run", "simulation.py", "--server.port=8501", "--server.address=0.0.0.0"]
