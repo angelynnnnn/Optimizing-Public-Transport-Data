@@ -3,50 +3,36 @@
 # 1. Repository Structure
 Below is an overview of the repository structure and what each folder/file contains
 
-```├── env/
+```
+├── env/
 ├── _pycache_/
 ├── .env.example               # Example environment variable file for configuration
 ├── .gitignore                 # Specifies files to ignore in version control
 ├── Dockerfile                 # Docker setup for project containerization
+├── NLP_Analysis_Results.csv
+├── Optional-Subtask 1 (Group A).ipynb  # (Subgroup A Optional question 1)
 ├── README.md                  # Project overview and setup instructions
+├── bus_stop_coords.csv        # Coordinates of bus stops used in analysis
+├── clean_data.csv             # Processed and cleaned survey data
+├── clean_functions.py         # Functions used for cleaning raw data
+├── cleaned_routes.csv         # Routes data after cleaning
+├── config.py                  # Configuration settings for the project
+├── custom_constraints.py      # Custom constraints used in model optimization
+├── data_cleaning.ipynb        # Notebook detailing the data cleaning steps
+├── data_generation.ipynb      # Synthetic data generation process
+├── demand_forecasting.ipynb   # Forecasting future demand (Subgroup B Question 1)
+├── form_responses.csv         # Raw survey responses from users
+├── future_predicted_data.csv  # Future data predictions for usage patterns
+├── grouped_data.csv           # Grouped data by certain categories
+├── grp_A_User_Satisfaction_Model.ipynb  # Model for analyzing user satisfaction (Subgroup A Question 1)
+├── main.py                    # Main script that runs the data pipeline
 ├── requirements.txt           # List of dependencies for the project
-│
-├── data/
-│   ├── bus_stop_coords.csv        # Coordinates of bus stops used in analysis
-│   ├── clean_data.csv             # Processed and cleaned survey data
-│   ├── cleaned_routes.csv         # Routes data after cleaning
-│   ├── future_predicted_data.csv  # Future data predictions for usage patterns
-│   ├── grouped_data.csv           # Grouped data by certain categories
-│   ├── synthetic_data.csv         # Generated synthetic data to supplement the small dataset
-│   └── form_responses.csv         # Raw survey responses from users
-│
-├── notebooks/
-│   ├── Multivariate.ipynb         # Notebook for multivariate demand forecasting
-│   ├── NLP_Analysis_Results.csv   # Results from NLP analysis
-│   ├── data_cleaning.ipynb        # Notebook detailing the data cleaning steps
-│   ├── data_generation.ipynb      # Synthetic data generation process
-│   ├── multivariate2.ipynb        # Secondary multivariate analysis notebook
-│   ├── optimization.ipynb         # Optimization analysis for bus operations
-│   ├── route_visualization.ipynb  # Visualizes optimized routes for the shuttle service
-│   ├── testsyntheise.ipynb        # Testing synthetic data generation
-│   ├── travel_patterns.ipynb      # Analysis of user travel patterns on campus
-│   └── user_segmentation.ipynb    # Segmentation analysis for different user groups
-│
-├── scripts/
-│   ├── clean_functions.py         # Functions used for cleaning raw data
-│   ├── config.py                  # Configuration settings for the project
-│   ├── custom_constraints.py      # Custom constraints used in model optimization
-│   ├── main.py                    # Main script that runs the data pipeline
-│   ├── simulation.py              # Simulations for predicting shuttle demand
-│   ├── utils.py                   # Utility functions for data processing
-│   └── test.py                    # Placeholder or testing script for code functions
-│
-├── models/
-│   ├── grp_A_User_Satisfaction_Model.ipynb  # Model for analyzing user satisfaction
-│   └── future_predicted_data.csv            # Model-generated predictions for future data
-│
-└── visualizations/
-    └── route_visualization.ipynb            # Notebook for route and clustering visualizations
+├── route_visualization.ipynb  # Visualizes optimized routes for the shuttle service
+├── simulation.py              # Simulations for route optimisation and capacity allocation (Subgroup B Question 2 and 3)
+├── synthetic_data.csv         # Generated synthetic data to supplement the small dataset
+├── travel_patterns.ipynb      # Analysis of user travel patterns on campus (Subgroup A Question 3)
+├── user_segmentation.ipynb    # Segmentation analysis for different user groups (Subgroup A Question 2)
+└── utils.py                   # Utility functions for data processing
 
 ```
 # 2. Real Data Collection
