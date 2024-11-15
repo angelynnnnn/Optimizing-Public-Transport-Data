@@ -61,9 +61,9 @@ To overcome the limitations of the small and skewed dataset, we generated synthe
 
 More Information about Synthetic Data Generation can be found [here](https://github.com/angelynnnnn/Optimizing-Public-Transport-Data/wiki/Data-Understanding)
 
-# 4 Data Dictionary 
-# Data Dictionary
-Dataset : clean_data.csv
+# 4. Data Dictionary 
+
+### Dataset : clean_data.csv
 
 | Column Name                     | Data Type | Description                                                     |
 |---------------------------------|-----------|-----------------------------------------------------------------|
@@ -121,7 +121,7 @@ Dataset : clean_data.csv
 | `seasonal_changes_specific`      | object    | Specific details about how seasonal changes impact shuttle service usage.                                      |
 | `further_comments`               | object    | Any additional feedback provided by the respondent.       |
 
-Dataset : bus_stops_coords.csv
+### Dataset : bus_stops_coords.csv
 
 
 | Column Name | Data Type | Description |
@@ -130,7 +130,7 @@ Dataset : bus_stops_coords.csv
 | Latitude    | float     | Latitude coordinate of the bus stop. |
 | Longitude   | float     | Longitude coordinate of the bus stop. |
 
-Dataset : cleaned_routes.csv
+### Dataset : cleaned_routes.csv
 
 | Column Name        | Data Type | Description                                                                                      |
 |--------------------|-----------|--------------------------------------------------------------------------------------------------|
@@ -147,7 +147,7 @@ Dataset : cleaned_routes.csv
 | `coverage`         | object    | Satisfaction rating for route coverage of the shuttle service.                                   |
 | `crowdedness`      | int       | Satisfaction rating for crowdedness on the trip.                                                 |
 
-Dataset : NLP_Analysis_Results.csv
+### Dataset : NLP_Analysis_Results.csv
 
 | Column Name       | Data Type | Description                                                                                                      |
 |-------------------|-----------|------------------------------------------------------------------------------------------------------------------|
@@ -156,7 +156,7 @@ Dataset : NLP_Analysis_Results.csv
 | `Topic`             | int       | The topic assigned to the text based on topic modeling.                                                          |
 | `Cluster`           | int       | The cluster assigned to the text based on clustering analysis.                                                   |
 
-Dataset : future_predicted_data.csv
+### Dataset : future_predicted_data.csv
 
 | Column Name        | Data Type | Description                                                        |
 |--------------------|-----------|--------------------------------------------------------------------|
@@ -171,8 +171,28 @@ Dataset : future_predicted_data.csv
 | `predicted_count`  | float     | Predicted count of passengers arriving at bus stop by minute       |
 
 
-# Endpoints
-## Running Streamlit
+# Setting up the environment and running the code 
+
+### Requirements :
+- Python 3.8 +
+- Docker
+- Dependencies listed in 'requirements.txt'
+
+## Group Tasks
+
+### Subgroup A
+Qn 1 : Run [THIS](grp_A_User_Satisfaction_Model.ipynb)
+Qn 2 : Run 
+Qm 3 : Run 
+Optional Q 1 : Run 
+
+
+### Subgroup B 
+Qn 1 : Run 
+Qn 2 : Run 
+Qn 3 : Run 
+
+# Running Streamlit
 To run the Streamlit app, you will need your own Mapbox API key.
 
 1. **Get an API Key**
